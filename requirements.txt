@@ -1,0 +1,10 @@
+geopandas>=0.14
+shapely>=2.0
+pyproj>=3.6
+rasterio>=1.3
+numpy>=1.26
+scipy>=1.11
+matplotlib>=3.8
+requests>=2.31
+osqp>=0.6
+scikit-image>=0.22

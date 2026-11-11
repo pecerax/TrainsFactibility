@@ -1,0 +1,3580 @@
+[
+ {
+  "id": "01",
+  "nombre": "Santiago - La Calera",
+  "largo_km": 133.6689904296715,
+  "cota_min": 217.93472290039062,
+  "cota_max": 812.8839721679688,
+  "subida_acum_m": 768.4642333984375,
+  "bajada_acum_m": 1077.8921813964844,
+  "terreno_pct_sobre_2_5": 9.253731343283581,
+  "carga_1.5": {
+   "tunel_km": 11.8,
+   "viaducto_km": 14.2,
+   "tierra_km": 107.66899042967151,
+   "corte_terraplen_medio_m": 1.8743832185817053,
+   "tuneles": [
+    [
+     71.4,
+     73.8
+    ],
+    [
+     87.0,
+     93.0
+    ],
+    [
+     93.4,
+     94.4
+    ],
+    [
+     96.6,
+     96.8
+    ],
+    [
+     98.0,
+     100.2
+    ]
+   ],
+   "viaductos": [
+    [
+     65.4,
+     70.0
+    ],
+    [
+     100.4,
+     100.6
+    ],
+    [
+     100.8,
+     110.2
+    ]
+   ]
+  },
+  "mixto_2.5": {
+   "tunel_km": 3.8,
+   "viaducto_km": 5.4,
+   "tierra_km": 124.4689904296715,
+   "corte_terraplen_medio_m": 1.102543417253459,
+   "tuneles": [
+    [
+     71.6,
+     72.8
+    ],
+    [
+     98.0,
+     100.4
+    ],
+    [
+     100.6,
+     100.8
+    ]
+   ],
+   "viaductos": [
+    [
+     68.4,
+     69.0
+    ],
+    [
+     69.2,
+     70.2
+    ],
+    [
+     100.8,
+     104.6
+    ]
+   ]
+  },
+  "cruces_cauces": [
+   {
+    "km": 7.1,
+    "cuenca_km2": 24.4,
+    "caudal_medio_m3s": 0.176,
+    "orden": 1
+   },
+   {
+    "km": 15.2,
+    "cuenca_km2": 641.0,
+    "caudal_medio_m3s": 4.508,
+    "orden": 4
+   },
+   {
+    "km": 16.5,
+    "cuenca_km2": 206.3,
+    "caudal_medio_m3s": 1.209,
+    "orden": 3
+   },
+   {
+    "km": 18.2,
+    "cuenca_km2": 14.0,
+    "caudal_medio_m3s": 0.084,
+    "orden": 1
+   },
+   {
+    "km": 24.7,
+    "cuenca_km2": 1203.7,
+    "caudal_medio_m3s": 6.461,
+    "orden": 3
+   },
+   {
+    "km": 32.2,
+    "cuenca_km2": 1183.0,
+    "caudal_medio_m3s": 6.369,
+    "orden": 3
+   },
+   {
+    "km": 37.0,
+    "cuenca_km2": 1082.1,
+    "caudal_medio_m3s": 5.864,
+    "orden": 3
+   },
+   {
+    "km": 38.2,
+    "cuenca_km2": 416.6,
+    "caudal_medio_m3s": 2.006,
+    "orden": 2
+   },
+   {
+    "km": 46.4,
+    "cuenca_km2": 416.6,
+    "caudal_medio_m3s": 2.006,
+    "orden": 2
+   },
+   {
+    "km": 48.7,
+    "cuenca_km2": 318.3,
+    "caudal_medio_m3s": 1.433,
+    "orden": 2
+   },
+   {
+    "km": 48.7,
+    "cuenca_km2": 416.6,
+    "caudal_medio_m3s": 2.006,
+    "orden": 2
+   },
+   {
+    "km": 52.4,
+    "cuenca_km2": 318.3,
+    "caudal_medio_m3s": 1.433,
+    "orden": 2
+   },
+   {
+    "km": 53.2,
+    "cuenca_km2": 416.6,
+    "caudal_medio_m3s": 2.006,
+    "orden": 2
+   },
+   {
+    "km": 57.2,
+    "cuenca_km2": 416.6,
+    "caudal_medio_m3s": 2.006,
+    "orden": 2
+   },
+   {
+    "km": 74.6,
+    "cuenca_km2": 30.4,
+    "caudal_medio_m3s": 0.132,
+    "orden": 1
+   },
+   {
+    "km": 79.1,
+    "cuenca_km2": 98.7,
+    "caudal_medio_m3s": 0.429,
+    "orden": 1
+   },
+   {
+    "km": 83.5,
+    "cuenca_km2": 98.7,
+    "caudal_medio_m3s": 0.429,
+    "orden": 1
+   },
+   {
+    "km": 97.5,
+    "cuenca_km2": 63.8,
+    "caudal_medio_m3s": 0.271,
+    "orden": 2
+   },
+   {
+    "km": 99.9,
+    "cuenca_km2": 35.7,
+    "caudal_medio_m3s": 0.154,
+    "orden": 1
+   },
+   {
+    "km": 100.3,
+    "cuenca_km2": 151.8,
+    "caudal_medio_m3s": 0.622,
+    "orden": 2
+   },
+   {
+    "km": 103.3,
+    "cuenca_km2": 151.8,
+    "caudal_medio_m3s": 0.622,
+    "orden": 2
+   },
+   {
+    "km": 112.7,
+    "cuenca_km2": 334.7,
+    "caudal_medio_m3s": 1.451,
+    "orden": 3
+   },
+   {
+    "km": 114.6,
+    "cuenca_km2": 5590.7,
+    "caudal_medio_m3s": 28.773,
+    "orden": 4
+   },
+   {
+    "km": 123.1,
+    "cuenca_km2": 5676.6,
+    "caudal_medio_m3s": 28.969,
+    "orden": 4
+   },
+   {
+    "km": 132.7,
+    "cuenca_km2": 5862.6,
+    "caudal_medio_m3s": 29.622,
+    "orden": 4
+   }
+  ],
+  "n_cruces_mayores": 6,
+  "suelo_blando_km": 25.0,
+  "volcanico_km": 105.0,
+  "geologia": [
+   {
+    "desde_km": 0.0,
+    "hasta_km": 10.0,
+    "nombre": "Quaternary Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Quaternary",
+    "edad_ma": 2.58,
+    "color": "#F9F97F",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 10.0,
+    "hasta_km": 15.0,
+    "nombre": "Paleogene - Neogene Volcano-sedimentary",
+    "litologia": "Volcaniclastic, volcanic",
+    "edad": "Cenozoic",
+    "edad_ma": 66,
+    "color": "#F4B470",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 15.0,
+    "hasta_km": 30.0,
+    "nombre": "Quaternary Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Quaternary",
+    "edad_ma": 2.58,
+    "color": "#F9F97F",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 30.0,
+    "hasta_km": 40.0,
+    "nombre": "Cretaceous Granitic",
+    "litologia": "Granite",
+    "edad": "Cretaceous",
+    "edad_ma": 143.1,
+    "color": "#7FC64E",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 40.0,
+    "hasta_km": 130.0,
+    "nombre": "Cretaceous Volcano-sedimentary",
+    "litologia": "Volcaniclastic, volcanic",
+    "edad": "Cretaceous",
+    "edad_ma": 143.1,
+    "color": "#7FC64E",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 130.0,
+    "hasta_km": 133.6689904296715,
+    "nombre": "Jurassic Volcano-sedimentary",
+    "litologia": "Volcaniclastic, volcanic",
+    "edad": "Jurassic",
+    "edad_ma": 201.4,
+    "color": "#34B2C9",
+    "escala": "small",
+    "fuente_id": 1087
+   }
+  ],
+  "fallas_cruzadas": [],
+  "fallas_a_menos_de_10km": []
+ },
+ {
+  "id": "02",
+  "nombre": "La Calera - La Serena",
+  "largo_km": 461.45308215492844,
+  "cota_min": 0.7521930932998657,
+  "cota_max": 378.6511535644531,
+  "subida_acum_m": 4895.234350025654,
+  "bajada_acum_m": 5085.960344135761,
+  "terreno_pct_sobre_2_5": 21.048072758770033,
+  "carga_1.5": {
+   "tunel_km": 32.2,
+   "viaducto_km": 37.0,
+   "tierra_km": 392.2530821549284,
+   "corte_terraplen_medio_m": 3.9926144336614873,
+   "tuneles": [
+    [
+     70.2,
+     70.6
+    ],
+    [
+     191.2,
+     195.2
+    ],
+    [
+     236.0,
+     238.4
+    ],
+    [
+     248.4,
+     248.8
+    ],
+    [
+     269.8,
+     270.2
+    ],
+    [
+     273.2,
+     273.4
+    ],
+    [
+     280.0,
+     285.4
+    ],
+    [
+     285.6,
+     289.8
+    ],
+    [
+     302.8,
+     308.6
+    ],
+    [
+     319.2,
+     322.6
+    ],
+    [
+     326.8,
+     329.2
+    ],
+    [
+     329.4,
+     329.6
+    ],
+    [
+     349.8,
+     350.0
+    ],
+    [
+     350.2,
+     352.8
+    ],
+    [
+     445.8,
+     446.0
+    ]
+   ],
+   "viaductos": [
+    [
+     129.6,
+     130.6
+    ],
+    [
+     188.0,
+     191.0
+    ],
+    [
+     196.4,
+     199.0
+    ],
+    [
+     202.8,
+     203.2
+    ],
+    [
+     210.4,
+     210.6
+    ],
+    [
+     230.4,
+     234.6
+    ],
+    [
+     246.4,
+     247.6
+    ],
+    [
+     253.2,
+     254.0
+    ],
+    [
+     263.0,
+     263.6
+    ],
+    [
+     267.0,
+     267.2
+    ],
+    [
+     267.4,
+     267.8
+    ],
+    [
+     275.2,
+     275.6
+    ],
+    [
+     275.8,
+     276.6
+    ],
+    [
+     276.8,
+     277.0
+    ],
+    [
+     290.8,
+     299.4
+    ],
+    [
+     300.0,
+     300.6
+    ],
+    [
+     309.0,
+     309.2
+    ],
+    [
+     309.4,
+     309.6
+    ],
+    [
+     323.2,
+     324.2
+    ],
+    [
+     330.4,
+     335.4
+    ],
+    [
+     344.4,
+     348.6
+    ],
+    [
+     361.2,
+     361.4
+    ],
+    [
+     397.8,
+     398.0
+    ],
+    [
+     413.8,
+     414.2
+    ],
+    [
+     448.0,
+     448.4
+    ]
+   ]
+  },
+  "mixto_2.5": {
+   "tunel_km": 12.8,
+   "viaducto_km": 23.0,
+   "tierra_km": 425.6530821549284,
+   "corte_terraplen_medio_m": 2.564095379935433,
+   "tuneles": [
+    [
+     191.2,
+     194.2
+    ],
+    [
+     194.4,
+     194.6
+    ],
+    [
+     236.0,
+     237.0
+    ],
+    [
+     248.4,
+     248.8
+    ],
+    [
+     283.2,
+     283.6
+    ],
+    [
+     286.0,
+     290.0
+    ],
+    [
+     302.8,
+     304.2
+    ],
+    [
+     319.4,
+     319.6
+    ],
+    [
+     322.4,
+     322.6
+    ],
+    [
+     327.6,
+     328.6
+    ],
+    [
+     349.8,
+     350.0
+    ],
+    [
+     350.6,
+     351.4
+    ]
+   ],
+   "viaductos": [
+    [
+     130.2,
+     130.6
+    ],
+    [
+     188.8,
+     191.0
+    ],
+    [
+     196.4,
+     198.0
+    ],
+    [
+     203.0,
+     203.2
+    ],
+    [
+     210.4,
+     210.6
+    ],
+    [
+     232.8,
+     234.6
+    ],
+    [
+     246.4,
+     246.8
+    ],
+    [
+     247.0,
+     247.6
+    ],
+    [
+     253.2,
+     253.4
+    ],
+    [
+     253.6,
+     253.8
+    ],
+    [
+     263.0,
+     263.4
+    ],
+    [
+     267.0,
+     267.2
+    ],
+    [
+     267.4,
+     267.8
+    ],
+    [
+     275.2,
+     275.6
+    ],
+    [
+     275.8,
+     276.6
+    ],
+    [
+     276.8,
+     277.0
+    ],
+    [
+     291.0,
+     295.6
+    ],
+    [
+     295.8,
+     296.4
+    ],
+    [
+     296.8,
+     297.8
+    ],
+    [
+     298.0,
+     299.2
+    ],
+    [
+     300.2,
+     300.4
+    ],
+    [
+     308.8,
+     309.2
+    ],
+    [
+     309.4,
+     309.6
+    ],
+    [
+     323.0,
+     324.0
+    ],
+    [
+     330.4,
+     332.8
+    ],
+    [
+     346.8,
+     347.2
+    ],
+    [
+     347.4,
+     347.8
+    ],
+    [
+     348.2,
+     348.6
+    ]
+   ]
+  },
+  "cruces_cauces": [
+   {
+    "km": 12.5,
+    "cuenca_km2": 6402.0,
+    "caudal_medio_m3s": 31.734,
+    "orden": 4
+   },
+   {
+    "km": 15.9,
+    "cuenca_km2": 6402.0,
+    "caudal_medio_m3s": 31.734,
+    "orden": 4
+   },
+   {
+    "km": 19.0,
+    "cuenca_km2": 6402.0,
+    "caudal_medio_m3s": 31.734,
+    "orden": 4
+   },
+   {
+    "km": 23.9,
+    "cuenca_km2": 41.6,
+    "caudal_medio_m3s": 0.207,
+    "orden": 1
+   },
+   {
+    "km": 24.5,
+    "cuenca_km2": 6636.6,
+    "caudal_medio_m3s": 32.753,
+    "orden": 4
+   },
+   {
+    "km": 30.5,
+    "cuenca_km2": 563.3,
+    "caudal_medio_m3s": 2.129,
+    "orden": 3
+   },
+   {
+    "km": 34.3,
+    "cuenca_km2": 25.6,
+    "caudal_medio_m3s": 0.121,
+    "orden": 1
+   },
+   {
+    "km": 35.3,
+    "cuenca_km2": 7310.2,
+    "caudal_medio_m3s": 35.864,
+    "orden": 4
+   },
+   {
+    "km": 41.7,
+    "cuenca_km2": 208.7,
+    "caudal_medio_m3s": 0.878,
+    "orden": 2
+   },
+   {
+    "km": 58.4,
+    "cuenca_km2": 102.8,
+    "caudal_medio_m3s": 0.378,
+    "orden": 2
+   },
+   {
+    "km": 62.5,
+    "cuenca_km2": 102.8,
+    "caudal_medio_m3s": 0.378,
+    "orden": 2
+   },
+   {
+    "km": 74.6,
+    "cuenca_km2": 298.2,
+    "caudal_medio_m3s": 1.071,
+    "orden": 2
+   },
+   {
+    "km": 75.3,
+    "cuenca_km2": 58.7,
+    "caudal_medio_m3s": 0.217,
+    "orden": 1
+   },
+   {
+    "km": 76.1,
+    "cuenca_km2": 234.0,
+    "caudal_medio_m3s": 0.834,
+    "orden": 2
+   },
+   {
+    "km": 79.5,
+    "cuenca_km2": 210.3,
+    "caudal_medio_m3s": 0.751,
+    "orden": 2
+   },
+   {
+    "km": 82.2,
+    "cuenca_km2": 44.8,
+    "caudal_medio_m3s": 0.157,
+    "orden": 1
+   },
+   {
+    "km": 85.3,
+    "cuenca_km2": 19.3,
+    "caudal_medio_m3s": 0.067,
+    "orden": 1
+   },
+   {
+    "km": 86.8,
+    "cuenca_km2": 114.0,
+    "caudal_medio_m3s": 0.413,
+    "orden": 2
+   },
+   {
+    "km": 88.4,
+    "cuenca_km2": 30.9,
+    "caudal_medio_m3s": 0.108,
+    "orden": 1
+   },
+   {
+    "km": 93.1,
+    "cuenca_km2": 26.6,
+    "caudal_medio_m3s": 0.096,
+    "orden": 1
+   },
+   {
+    "km": 97.0,
+    "cuenca_km2": 58.6,
+    "caudal_medio_m3s": 0.22,
+    "orden": 2
+   },
+   {
+    "km": 97.5,
+    "cuenca_km2": 11.2,
+    "caudal_medio_m3s": 0.047,
+    "orden": 1
+   },
+   {
+    "km": 105.1,
+    "cuenca_km2": 1840.7,
+    "caudal_medio_m3s": 9.777,
+    "orden": 4
+   },
+   {
+    "km": 112.4,
+    "cuenca_km2": 16.5,
+    "caudal_medio_m3s": 0.079,
+    "orden": 1
+   },
+   {
+    "km": 116.6,
+    "cuenca_km2": 11.4,
+    "caudal_medio_m3s": 0.055,
+    "orden": 1
+   },
+   {
+    "km": 117.9,
+    "cuenca_km2": 1998.8,
+    "caudal_medio_m3s": 10.535,
+    "orden": 4
+   },
+   {
+    "km": 122.4,
+    "cuenca_km2": 1982.4,
+    "caudal_medio_m3s": 10.275,
+    "orden": 4
+   },
+   {
+    "km": 129.2,
+    "cuenca_km2": 158.1,
+    "caudal_medio_m3s": 0.573,
+    "orden": 2
+   },
+   {
+    "km": 138.8,
+    "cuenca_km2": 36.3,
+    "caudal_medio_m3s": 0.118,
+    "orden": 1
+   },
+   {
+    "km": 144.5,
+    "cuenca_km2": 25.3,
+    "caudal_medio_m3s": 0.08,
+    "orden": 1
+   },
+   {
+    "km": 159.1,
+    "cuenca_km2": 745.4,
+    "caudal_medio_m3s": 2.261,
+    "orden": 3
+   },
+   {
+    "km": 161.7,
+    "cuenca_km2": 31.5,
+    "caudal_medio_m3s": 0.095,
+    "orden": 1
+   },
+   {
+    "km": 188.1,
+    "cuenca_km2": 697.7,
+    "caudal_medio_m3s": 2.046,
+    "orden": 3
+   },
+   {
+    "km": 190.8,
+    "cuenca_km2": 19.0,
+    "caudal_medio_m3s": 0.05,
+    "orden": 1
+   },
+   {
+    "km": 213.8,
+    "cuenca_km2": 15.5,
+    "caudal_medio_m3s": 0.041,
+    "orden": 1
+   },
+   {
+    "km": 219.6,
+    "cuenca_km2": 7808.3,
+    "caudal_medio_m3s": 32.616,
+    "orden": 5
+   },
+   {
+    "km": 225.0,
+    "cuenca_km2": 18.3,
+    "caudal_medio_m3s": 0.054,
+    "orden": 1
+   },
+   {
+    "km": 247.0,
+    "cuenca_km2": 45.5,
+    "caudal_medio_m3s": 0.11,
+    "orden": 1
+   },
+   {
+    "km": 253.0,
+    "cuenca_km2": 68.4,
+    "caudal_medio_m3s": 0.161,
+    "orden": 2
+   },
+   {
+    "km": 260.1,
+    "cuenca_km2": 32.3,
+    "caudal_medio_m3s": 0.073,
+    "orden": 1
+   },
+   {
+    "km": 263.2,
+    "cuenca_km2": 74.7,
+    "caudal_medio_m3s": 0.175,
+    "orden": 2
+   },
+   {
+    "km": 267.4,
+    "cuenca_km2": 45.2,
+    "caudal_medio_m3s": 0.097,
+    "orden": 1
+   },
+   {
+    "km": 276.3,
+    "cuenca_km2": 151.1,
+    "caudal_medio_m3s": 0.341,
+    "orden": 2
+   },
+   {
+    "km": 291.8,
+    "cuenca_km2": 27.0,
+    "caudal_medio_m3s": 0.052,
+    "orden": 1
+   },
+   {
+    "km": 292.0,
+    "cuenca_km2": 731.8,
+    "caudal_medio_m3s": 1.341,
+    "orden": 3
+   },
+   {
+    "km": 296.1,
+    "cuenca_km2": 76.6,
+    "caudal_medio_m3s": 0.126,
+    "orden": 2
+   },
+   {
+    "km": 309.7,
+    "cuenca_km2": 53.6,
+    "caudal_medio_m3s": 0.093,
+    "orden": 1
+   },
+   {
+    "km": 314.4,
+    "cuenca_km2": 26.0,
+    "caudal_medio_m3s": 0.047,
+    "orden": 1
+   },
+   {
+    "km": 325.6,
+    "cuenca_km2": 16.2,
+    "caudal_medio_m3s": 0.029,
+    "orden": 1
+   },
+   {
+    "km": 332.8,
+    "cuenca_km2": 250.9,
+    "caudal_medio_m3s": 0.406,
+    "orden": 3
+   },
+   {
+    "km": 334.6,
+    "cuenca_km2": 1264.0,
+    "caudal_medio_m3s": 2.288,
+    "orden": 4
+   },
+   {
+    "km": 339.7,
+    "cuenca_km2": 10152.5,
+    "caudal_medio_m3s": 22.814,
+    "orden": 5
+   },
+   {
+    "km": 343.1,
+    "cuenca_km2": 15.9,
+    "caudal_medio_m3s": 0.029,
+    "orden": 1
+   },
+   {
+    "km": 345.0,
+    "cuenca_km2": 10125.7,
+    "caudal_medio_m3s": 22.797,
+    "orden": 5
+   },
+   {
+    "km": 360.3,
+    "cuenca_km2": 11.8,
+    "caudal_medio_m3s": 0.019,
+    "orden": 1
+   },
+   {
+    "km": 361.1,
+    "cuenca_km2": 140.1,
+    "caudal_medio_m3s": 0.221,
+    "orden": 2
+   },
+   {
+    "km": 362.6,
+    "cuenca_km2": 182.1,
+    "caudal_medio_m3s": 0.287,
+    "orden": 3
+   },
+   {
+    "km": 365.7,
+    "cuenca_km2": 224.8,
+    "caudal_medio_m3s": 0.347,
+    "orden": 3
+   },
+   {
+    "km": 369.7,
+    "cuenca_km2": 341.5,
+    "caudal_medio_m3s": 0.484,
+    "orden": 3
+   },
+   {
+    "km": 373.9,
+    "cuenca_km2": 341.5,
+    "caudal_medio_m3s": 0.484,
+    "orden": 3
+   },
+   {
+    "km": 375.5,
+    "cuenca_km2": 18.0,
+    "caudal_medio_m3s": 0.023,
+    "orden": 1
+   },
+   {
+    "km": 376.1,
+    "cuenca_km2": 436.1,
+    "caudal_medio_m3s": 0.536,
+    "orden": 3
+   },
+   {
+    "km": 379.7,
+    "cuenca_km2": 436.1,
+    "caudal_medio_m3s": 0.536,
+    "orden": 3
+   },
+   {
+    "km": 384.4,
+    "cuenca_km2": 436.1,
+    "caudal_medio_m3s": 0.536,
+    "orden": 3
+   },
+   {
+    "km": 396.5,
+    "cuenca_km2": 231.3,
+    "caudal_medio_m3s": 0.295,
+    "orden": 2
+   },
+   {
+    "km": 404.2,
+    "cuenca_km2": 80.5,
+    "caudal_medio_m3s": 0.096,
+    "orden": 1
+   },
+   {
+    "km": 410.1,
+    "cuenca_km2": 12.8,
+    "caudal_medio_m3s": 0.015,
+    "orden": 1
+   },
+   {
+    "km": 411.3,
+    "cuenca_km2": 44.9,
+    "caudal_medio_m3s": 0.051,
+    "orden": 2
+   },
+   {
+    "km": 424.6,
+    "cuenca_km2": 522.3,
+    "caudal_medio_m3s": 0.568,
+    "orden": 3
+   },
+   {
+    "km": 428.7,
+    "cuenca_km2": 19.3,
+    "caudal_medio_m3s": 0.019,
+    "orden": 1
+   },
+   {
+    "km": 435.8,
+    "cuenca_km2": 50.7,
+    "caudal_medio_m3s": 0.05,
+    "orden": 2
+   },
+   {
+    "km": 436.5,
+    "cuenca_km2": 75.2,
+    "caudal_medio_m3s": 0.075,
+    "orden": 2
+   },
+   {
+    "km": 441.5,
+    "cuenca_km2": 54.8,
+    "caudal_medio_m3s": 0.06,
+    "orden": 1
+   },
+   {
+    "km": 442.0,
+    "cuenca_km2": 160.5,
+    "caudal_medio_m3s": 0.17,
+    "orden": 2
+   },
+   {
+    "km": 444.8,
+    "cuenca_km2": 199.6,
+    "caudal_medio_m3s": 0.209,
+    "orden": 2
+   },
+   {
+    "km": 461.1,
+    "cuenca_km2": 19.3,
+    "caudal_medio_m3s": 0.022,
+    "orden": 1
+   }
+  ],
+  "n_cruces_mayores": 12,
+  "suelo_blando_km": 45.0,
+  "volcanico_km": 85.0,
+  "geologia": [
+   {
+    "desde_km": 0.0,
+    "hasta_km": 25.0,
+    "nombre": "Jurassic Volcano-sedimentary",
+    "litologia": "Volcaniclastic, volcanic",
+    "edad": "Jurassic",
+    "edad_ma": 201.4,
+    "color": "#34B2C9",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 25.0,
+    "hasta_km": 40.0,
+    "nombre": "Jurassic Granitic",
+    "litologia": "Granite",
+    "edad": "Jurassic",
+    "edad_ma": 201.4,
+    "color": "#34B2C9",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 40.0,
+    "hasta_km": 75.0,
+    "nombre": "Neogene - Quaternary Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Cenozoic",
+    "edad_ma": 23.04,
+    "color": "#F2F91D",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 75.0,
+    "hasta_km": 95.0,
+    "nombre": "Jurassic Granitic",
+    "litologia": "Granite",
+    "edad": "Jurassic",
+    "edad_ma": 201.4,
+    "color": "#34B2C9",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 95.0,
+    "hasta_km": 115.0,
+    "nombre": "Triassic Volcano-sedimentary",
+    "litologia": "Volcaniclastic, volcanic",
+    "edad": "Triassic",
+    "edad_ma": 251.902,
+    "color": "#812B92",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 115.0,
+    "hasta_km": 140.0,
+    "nombre": "Jurassic Granitic",
+    "litologia": "Granite",
+    "edad": "Jurassic",
+    "edad_ma": 201.4,
+    "color": "#34B2C9",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 140.0,
+    "hasta_km": 180.0,
+    "nombre": "Triassic - Jurassic Basaltic",
+    "litologia": "basalt",
+    "edad": "Mesozoic",
+    "edad_ma": 251.902,
+    "color": "#5B6FAE",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 180.0,
+    "hasta_km": 195.0,
+    "nombre": "Triassic Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Triassic",
+    "edad_ma": 251.902,
+    "color": "#812B92",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 195.0,
+    "hasta_km": 200.0,
+    "nombre": "Triassic - Jurassic Granitic",
+    "litologia": "Granite",
+    "edad": "Mesozoic",
+    "edad_ma": 251.902,
+    "color": "#5B6FAE",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 200.0,
+    "hasta_km": 205.0,
+    "nombre": "Mesozoic sedimentary rocks",
+    "litologia": "sedimentary rocks",
+    "edad": "Jurassic",
+    "edad_ma": 201.3,
+    "color": "#34B2C9",
+    "escala": "tiny",
+    "fuente_id": 154
+   },
+   {
+    "desde_km": 205.0,
+    "hasta_km": 210.0,
+    "nombre": "Triassic - Jurassic Granitic",
+    "litologia": "Granite",
+    "edad": "Mesozoic",
+    "edad_ma": 251.902,
+    "color": "#5B6FAE",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 210.0,
+    "hasta_km": 235.0,
+    "nombre": "Devonian - Carboniferous Low to medium grade",
+    "litologia": "Low to medium grade metamorphic",
+    "edad": "Paleozoic",
+    "edad_ma": 419.62,
+    "color": "#99C08D",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 235.0,
+    "hasta_km": 240.0,
+    "nombre": "Triassic - Jurassic Granitic",
+    "litologia": "Granite",
+    "edad": "Mesozoic",
+    "edad_ma": 251.902,
+    "color": "#5B6FAE",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 240.0,
+    "hasta_km": 260.0,
+    "nombre": "Jurassic Granitic",
+    "litologia": "Granite",
+    "edad": "Jurassic",
+    "edad_ma": 201.4,
+    "color": "#34B2C9",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 260.0,
+    "hasta_km": 270.0,
+    "nombre": "Carboniferous - Permian Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Paleozoic",
+    "edad_ma": 358.86,
+    "color": "#67A599",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 270.0,
+    "hasta_km": 280.0,
+    "nombre": "Triassic Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Triassic",
+    "edad_ma": 251.902,
+    "color": "#812B92",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 280.0,
+    "hasta_km": 310.0,
+    "nombre": "Triassic - Jurassic Granitic",
+    "litologia": "Granite",
+    "edad": "Mesozoic",
+    "edad_ma": 251.902,
+    "color": "#5B6FAE",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 310.0,
+    "hasta_km": 330.0,
+    "nombre": "Jurassic Granitic",
+    "litologia": "Granite",
+    "edad": "Jurassic",
+    "edad_ma": 201.4,
+    "color": "#34B2C9",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 330.0,
+    "hasta_km": 410.0,
+    "nombre": "Neogene Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Neogene",
+    "edad_ma": 23.04,
+    "color": "#FFE619",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 410.0,
+    "hasta_km": 435.0,
+    "nombre": "Jurassic Granitic",
+    "litologia": "Granite",
+    "edad": "Jurassic",
+    "edad_ma": 201.4,
+    "color": "#34B2C9",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 435.0,
+    "hasta_km": 445.0,
+    "nombre": "Quaternary Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Quaternary",
+    "edad_ma": 2.58,
+    "color": "#F9F97F",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 445.0,
+    "hasta_km": 450.0,
+    "nombre": "Neogene Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Neogene",
+    "edad_ma": 23.04,
+    "color": "#FFE619",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 450.0,
+    "hasta_km": 455.0,
+    "nombre": "Mesozoic sedimentary rocks",
+    "litologia": "sedimentary rocks",
+    "edad": "Jurassic",
+    "edad_ma": 201.3,
+    "color": "#34B2C9",
+    "escala": "tiny",
+    "fuente_id": 154
+   },
+   {
+    "desde_km": 455.0,
+    "hasta_km": 461.45308215492844,
+    "nombre": "Neogene Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Neogene",
+    "edad_ma": 23.04,
+    "color": "#FFE619",
+    "escala": "small",
+    "fuente_id": 1087
+   }
+  ],
+  "fallas_cruzadas": [],
+  "fallas_a_menos_de_10km": []
+ },
+ {
+  "id": "03",
+  "nombre": "La Serena - Copiapó",
+  "largo_km": 413.52846058013955,
+  "cota_min": 1.6883350610733032,
+  "cota_max": 662.2776489257812,
+  "subida_acum_m": 2998.7961127758026,
+  "bajada_acum_m": 2640.064198255539,
+  "terreno_pct_sobre_2_5": 10.68148864185597,
+  "carga_1.5": {
+   "tunel_km": 6.6,
+   "viaducto_km": 15.6,
+   "tierra_km": 391.32846058013956,
+   "corte_terraplen_medio_m": 2.7453419914828467,
+   "tuneles": [
+    [
+     16.0,
+     17.4
+    ],
+    [
+     32.0,
+     32.2
+    ],
+    [
+     61.2,
+     61.8
+    ],
+    [
+     123.4,
+     127.0
+    ],
+    [
+     165.0,
+     165.2
+    ],
+    [
+     237.6,
+     237.8
+    ],
+    [
+     238.2,
+     238.4
+    ],
+    [
+     249.2,
+     249.4
+    ]
+   ],
+   "viaductos": [
+    [
+     9.0,
+     11.4
+    ],
+    [
+     25.4,
+     27.4
+    ],
+    [
+     60.2,
+     60.6
+    ],
+    [
+     62.4,
+     63.0
+    ],
+    [
+     109.0,
+     109.4
+    ],
+    [
+     128.4,
+     133.0
+    ],
+    [
+     160.6,
+     161.2
+    ],
+    [
+     215.4,
+     217.8
+    ],
+    [
+     233.4,
+     235.6
+    ]
+   ]
+  },
+  "mixto_2.5": {
+   "tunel_km": 1.6,
+   "viaducto_km": 4.8,
+   "tierra_km": 407.1284605801395,
+   "corte_terraplen_medio_m": 1.3477921870287126,
+   "tuneles": [
+    [
+     32.0,
+     32.2
+    ],
+    [
+     61.2,
+     61.8
+    ],
+    [
+     125.6,
+     126.4
+    ]
+   ],
+   "viaductos": [
+    [
+     25.8,
+     26.6
+    ],
+    [
+     60.4,
+     60.8
+    ],
+    [
+     62.4,
+     62.8
+    ],
+    [
+     109.0,
+     109.4
+    ],
+    [
+     129.0,
+     131.0
+    ],
+    [
+     234.8,
+     235.6
+    ]
+   ]
+  },
+  "cruces_cauces": [
+   {
+    "km": 1.7,
+    "cuenca_km2": 9441.1,
+    "caudal_medio_m3s": 10.579,
+    "orden": 5
+   },
+   {
+    "km": 6.0,
+    "cuenca_km2": 59.2,
+    "caudal_medio_m3s": 0.053,
+    "orden": 2
+   },
+   {
+    "km": 10.0,
+    "cuenca_km2": 259.0,
+    "caudal_medio_m3s": 0.181,
+    "orden": 2
+   },
+   {
+    "km": 32.2,
+    "cuenca_km2": 11.6,
+    "caudal_medio_m3s": 0.008,
+    "orden": 1
+   },
+   {
+    "km": 49.7,
+    "cuenca_km2": 17.4,
+    "caudal_medio_m3s": 0.011,
+    "orden": 1
+   },
+   {
+    "km": 75.7,
+    "cuenca_km2": 3911.7,
+    "caudal_medio_m3s": 3.051,
+    "orden": 5
+   },
+   {
+    "km": 77.9,
+    "cuenca_km2": 24.4,
+    "caudal_medio_m3s": 0.013,
+    "orden": 1
+   },
+   {
+    "km": 79.5,
+    "cuenca_km2": 58.6,
+    "caudal_medio_m3s": 0.031,
+    "orden": 1
+   },
+   {
+    "km": 85.6,
+    "cuenca_km2": 44.2,
+    "caudal_medio_m3s": 0.023,
+    "orden": 1
+   },
+   {
+    "km": 93.1,
+    "cuenca_km2": 43.1,
+    "caudal_medio_m3s": 0.023,
+    "orden": 1
+   },
+   {
+    "km": 100.3,
+    "cuenca_km2": 344.7,
+    "caudal_medio_m3s": 0.174,
+    "orden": 3
+   },
+   {
+    "km": 102.6,
+    "cuenca_km2": 150.9,
+    "caudal_medio_m3s": 0.071,
+    "orden": 2
+   },
+   {
+    "km": 106.1,
+    "cuenca_km2": 41.9,
+    "caudal_medio_m3s": 0.019,
+    "orden": 1
+   },
+   {
+    "km": 109.1,
+    "cuenca_km2": 2104.6,
+    "caudal_medio_m3s": 0.927,
+    "orden": 4
+   },
+   {
+    "km": 115.0,
+    "cuenca_km2": 24.2,
+    "caudal_medio_m3s": 0.011,
+    "orden": 1
+   },
+   {
+    "km": 129.2,
+    "cuenca_km2": 10.9,
+    "caudal_medio_m3s": 0.005,
+    "orden": 1
+   },
+   {
+    "km": 130.4,
+    "cuenca_km2": 67.7,
+    "caudal_medio_m3s": 0.028,
+    "orden": 2
+   },
+   {
+    "km": 161.0,
+    "cuenca_km2": 194.4,
+    "caudal_medio_m3s": 0.069,
+    "orden": 2
+   },
+   {
+    "km": 167.1,
+    "cuenca_km2": 34.5,
+    "caudal_medio_m3s": 0.013,
+    "orden": 1
+   },
+   {
+    "km": 186.9,
+    "cuenca_km2": 30.9,
+    "caudal_medio_m3s": 0.017,
+    "orden": 1
+   },
+   {
+    "km": 188.9,
+    "cuenca_km2": 9789.8,
+    "caudal_medio_m3s": 5.828,
+    "orden": 5
+   },
+   {
+    "km": 190.2,
+    "cuenca_km2": 18.5,
+    "caudal_medio_m3s": 0.01,
+    "orden": 1
+   },
+   {
+    "km": 193.0,
+    "cuenca_km2": 9756.0,
+    "caudal_medio_m3s": 5.737,
+    "orden": 5
+   },
+   {
+    "km": 193.0,
+    "cuenca_km2": 75.8,
+    "caudal_medio_m3s": 0.037,
+    "orden": 2
+   },
+   {
+    "km": 193.1,
+    "cuenca_km2": 9641.9,
+    "caudal_medio_m3s": 5.62,
+    "orden": 5
+   },
+   {
+    "km": 197.2,
+    "cuenca_km2": 9641.9,
+    "caudal_medio_m3s": 5.62,
+    "orden": 5
+   },
+   {
+    "km": 200.6,
+    "cuenca_km2": 9563.1,
+    "caudal_medio_m3s": 5.505,
+    "orden": 5
+   },
+   {
+    "km": 203.7,
+    "cuenca_km2": 91.2,
+    "caudal_medio_m3s": 0.044,
+    "orden": 2
+   },
+   {
+    "km": 204.2,
+    "cuenca_km2": 9377.3,
+    "caudal_medio_m3s": 5.499,
+    "orden": 5
+   },
+   {
+    "km": 208.0,
+    "cuenca_km2": 9377.3,
+    "caudal_medio_m3s": 5.499,
+    "orden": 5
+   },
+   {
+    "km": 208.7,
+    "cuenca_km2": 49.6,
+    "caudal_medio_m3s": 0.028,
+    "orden": 1
+   },
+   {
+    "km": 210.2,
+    "cuenca_km2": 9285.3,
+    "caudal_medio_m3s": 5.544,
+    "orden": 5
+   },
+   {
+    "km": 212.3,
+    "cuenca_km2": 67.8,
+    "caudal_medio_m3s": 0.031,
+    "orden": 1
+   },
+   {
+    "km": 214.0,
+    "cuenca_km2": 9208.9,
+    "caudal_medio_m3s": 5.503,
+    "orden": 5
+   },
+   {
+    "km": 217.5,
+    "cuenca_km2": 577.1,
+    "caudal_medio_m3s": 0.237,
+    "orden": 3
+   },
+   {
+    "km": 225.8,
+    "cuenca_km2": 73.3,
+    "caudal_medio_m3s": 0.038,
+    "orden": 2
+   },
+   {
+    "km": 233.9,
+    "cuenca_km2": 8186.0,
+    "caudal_medio_m3s": 4.925,
+    "orden": 5
+   },
+   {
+    "km": 237.8,
+    "cuenca_km2": 69.8,
+    "caudal_medio_m3s": 0.032,
+    "orden": 1
+   },
+   {
+    "km": 240.7,
+    "cuenca_km2": 33.0,
+    "caudal_medio_m3s": 0.014,
+    "orden": 1
+   },
+   {
+    "km": 242.1,
+    "cuenca_km2": 81.3,
+    "caudal_medio_m3s": 0.035,
+    "orden": 2
+   },
+   {
+    "km": 242.3,
+    "cuenca_km2": 63.6,
+    "caudal_medio_m3s": 0.028,
+    "orden": 1
+   },
+   {
+    "km": 245.3,
+    "cuenca_km2": 63.6,
+    "caudal_medio_m3s": 0.028,
+    "orden": 1
+   },
+   {
+    "km": 248.3,
+    "cuenca_km2": 63.6,
+    "caudal_medio_m3s": 0.028,
+    "orden": 1
+   },
+   {
+    "km": 262.4,
+    "cuenca_km2": 139.2,
+    "caudal_medio_m3s": 0.064,
+    "orden": 2
+   },
+   {
+    "km": 263.3,
+    "cuenca_km2": 348.1,
+    "caudal_medio_m3s": 0.156,
+    "orden": 3
+   },
+   {
+    "km": 266.0,
+    "cuenca_km2": 455.8,
+    "caudal_medio_m3s": 0.206,
+    "orden": 3
+   },
+   {
+    "km": 270.2,
+    "cuenca_km2": 455.8,
+    "caudal_medio_m3s": 0.206,
+    "orden": 3
+   },
+   {
+    "km": 271.8,
+    "cuenca_km2": 15.9,
+    "caudal_medio_m3s": 0.007,
+    "orden": 1
+   },
+   {
+    "km": 274.2,
+    "cuenca_km2": 116.7,
+    "caudal_medio_m3s": 0.052,
+    "orden": 2
+   },
+   {
+    "km": 278.8,
+    "cuenca_km2": 67.2,
+    "caudal_medio_m3s": 0.031,
+    "orden": 2
+   },
+   {
+    "km": 282.2,
+    "cuenca_km2": 15.9,
+    "caudal_medio_m3s": 0.007,
+    "orden": 1
+   },
+   {
+    "km": 284.7,
+    "cuenca_km2": 27.8,
+    "caudal_medio_m3s": 0.013,
+    "orden": 1
+   },
+   {
+    "km": 296.2,
+    "cuenca_km2": 26.7,
+    "caudal_medio_m3s": 0.011,
+    "orden": 1
+   },
+   {
+    "km": 299.7,
+    "cuenca_km2": 2951.9,
+    "caudal_medio_m3s": 0.809,
+    "orden": 5
+   },
+   {
+    "km": 309.3,
+    "cuenca_km2": 3023.9,
+    "caudal_medio_m3s": 0.769,
+    "orden": 5
+   },
+   {
+    "km": 311.5,
+    "cuenca_km2": 27.5,
+    "caudal_medio_m3s": 0.01,
+    "orden": 1
+   },
+   {
+    "km": 316.1,
+    "cuenca_km2": 1162.9,
+    "caudal_medio_m3s": 0.171,
+    "orden": 3
+   },
+   {
+    "km": 320.2,
+    "cuenca_km2": 478.8,
+    "caudal_medio_m3s": 0.118,
+    "orden": 3
+   },
+   {
+    "km": 323.4,
+    "cuenca_km2": 12.0,
+    "caudal_medio_m3s": 0.005,
+    "orden": 1
+   },
+   {
+    "km": 323.9,
+    "cuenca_km2": 301.2,
+    "caudal_medio_m3s": 0.056,
+    "orden": 3
+   },
+   {
+    "km": 330.3,
+    "cuenca_km2": 41.6,
+    "caudal_medio_m3s": 0.009,
+    "orden": 1
+   },
+   {
+    "km": 336.7,
+    "cuenca_km2": 64.0,
+    "caudal_medio_m3s": 0.008,
+    "orden": 1
+   },
+   {
+    "km": 338.6,
+    "cuenca_km2": 22.0,
+    "caudal_medio_m3s": 0.002,
+    "orden": 1
+   },
+   {
+    "km": 340.8,
+    "cuenca_km2": 45.6,
+    "caudal_medio_m3s": 0.003,
+    "orden": 2
+   },
+   {
+    "km": 355.4,
+    "cuenca_km2": 492.5,
+    "caudal_medio_m3s": 0.024,
+    "orden": 3
+   },
+   {
+    "km": 363.1,
+    "cuenca_km2": 108.2,
+    "caudal_medio_m3s": 0.007,
+    "orden": 2
+   },
+   {
+    "km": 373.6,
+    "cuenca_km2": 43.6,
+    "caudal_medio_m3s": 0.005,
+    "orden": 1
+   },
+   {
+    "km": 376.8,
+    "cuenca_km2": 15.8,
+    "caudal_medio_m3s": 0.004,
+    "orden": 1
+   },
+   {
+    "km": 380.4,
+    "cuenca_km2": 23.8,
+    "caudal_medio_m3s": 0.008,
+    "orden": 1
+   },
+   {
+    "km": 381.9,
+    "cuenca_km2": 18.7,
+    "caudal_medio_m3s": 0.008,
+    "orden": 1
+   },
+   {
+    "km": 385.8,
+    "cuenca_km2": 17986.2,
+    "caudal_medio_m3s": 4.707,
+    "orden": 5
+   },
+   {
+    "km": 387.2,
+    "cuenca_km2": 19.8,
+    "caudal_medio_m3s": 0.009,
+    "orden": 1
+   },
+   {
+    "km": 387.6,
+    "cuenca_km2": 17946.9,
+    "caudal_medio_m3s": 4.683,
+    "orden": 5
+   },
+   {
+    "km": 392.3,
+    "cuenca_km2": 17880.8,
+    "caudal_medio_m3s": 4.647,
+    "orden": 5
+   },
+   {
+    "km": 397.8,
+    "cuenca_km2": 17562.6,
+    "caudal_medio_m3s": 4.493,
+    "orden": 5
+   },
+   {
+    "km": 403.3,
+    "cuenca_km2": 17318.6,
+    "caudal_medio_m3s": 4.36,
+    "orden": 5
+   },
+   {
+    "km": 407.4,
+    "cuenca_km2": 19.4,
+    "caudal_medio_m3s": 0.009,
+    "orden": 1
+   },
+   {
+    "km": 408.7,
+    "cuenca_km2": 17206.0,
+    "caudal_medio_m3s": 4.309,
+    "orden": 5
+   }
+  ],
+  "n_cruces_mayores": 22,
+  "suelo_blando_km": 90.0,
+  "volcanico_km": 20.0,
+  "geologia": [
+   {
+    "desde_km": 0.0,
+    "hasta_km": 15.0,
+    "nombre": "Neogene Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Neogene",
+    "edad_ma": 23.04,
+    "color": "#FFE619",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 15.0,
+    "hasta_km": 40.0,
+    "nombre": "Jurassic Granitic",
+    "litologia": "Granite",
+    "edad": "Jurassic",
+    "edad_ma": 201.4,
+    "color": "#34B2C9",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 40.0,
+    "hasta_km": 45.0,
+    "nombre": "Sin dato",
+    "litologia": "",
+    "edad": "",
+    "edad_ma": null,
+    "color": "#cccccc",
+    "escala": null,
+    "fuente_id": null
+   },
+   {
+    "desde_km": 45.0,
+    "hasta_km": 50.0,
+    "nombre": "Mesozoic-Cenozoic intrusive rocks",
+    "litologia": "intrusive igneous rocks",
+    "edad": "Phanerozoic",
+    "edad_ma": 201.3,
+    "color": "#9AD9DD",
+    "escala": "tiny",
+    "fuente_id": 154
+   },
+   {
+    "desde_km": 50.0,
+    "hasta_km": 55.0,
+    "nombre": "Jurassic Granitic",
+    "litologia": "Granite",
+    "edad": "Jurassic",
+    "edad_ma": 201.4,
+    "color": "#34B2C9",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 55.0,
+    "hasta_km": 60.0,
+    "nombre": "Mesozoic sedimentary rocks",
+    "litologia": "sedimentary rocks",
+    "edad": "Mesozoic",
+    "edad_ma": 201.3,
+    "color": "#5ABC8C",
+    "escala": "tiny",
+    "fuente_id": 154
+   },
+   {
+    "desde_km": 60.0,
+    "hasta_km": 70.0,
+    "nombre": "Jurassic Undifferentiated",
+    "litologia": "Volcanic",
+    "edad": "Jurassic",
+    "edad_ma": 201.4,
+    "color": "#34B2C9",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 70.0,
+    "hasta_km": 85.0,
+    "nombre": "Quaternary Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Quaternary",
+    "edad_ma": 2.58,
+    "color": "#F9F97F",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 85.0,
+    "hasta_km": 95.0,
+    "nombre": "Devonian - Carboniferous Low to medium grade",
+    "litologia": "Low to medium grade metamorphic",
+    "edad": "Paleozoic",
+    "edad_ma": 419.62,
+    "color": "#99C08D",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 95.0,
+    "hasta_km": 105.0,
+    "nombre": "Jurassic Granitic",
+    "litologia": "Granite",
+    "edad": "Jurassic",
+    "edad_ma": 201.4,
+    "color": "#34B2C9",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 105.0,
+    "hasta_km": 125.0,
+    "nombre": "Devonian - Carboniferous Low to medium grade",
+    "litologia": "Low to medium grade metamorphic",
+    "edad": "Paleozoic",
+    "edad_ma": 419.62,
+    "color": "#99C08D",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 125.0,
+    "hasta_km": 135.0,
+    "nombre": "Jurassic Granitic",
+    "litologia": "Granite",
+    "edad": "Jurassic",
+    "edad_ma": 201.4,
+    "color": "#34B2C9",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 135.0,
+    "hasta_km": 145.0,
+    "nombre": "Mesozoic-Cenozoic intrusive rocks",
+    "litologia": "intrusive igneous rocks",
+    "edad": "Phanerozoic",
+    "edad_ma": 201.3,
+    "color": "#9AD9DD",
+    "escala": "tiny",
+    "fuente_id": 154
+   },
+   {
+    "desde_km": 145.0,
+    "hasta_km": 150.0,
+    "nombre": "Jurassic Granitic",
+    "litologia": "Granite",
+    "edad": "Jurassic",
+    "edad_ma": 201.4,
+    "color": "#34B2C9",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 150.0,
+    "hasta_km": 160.0,
+    "nombre": "Mesozoic-Cenozoic intrusive rocks",
+    "litologia": "intrusive igneous rocks",
+    "edad": "Phanerozoic",
+    "edad_ma": 201.3,
+    "color": "#9AD9DD",
+    "escala": "tiny",
+    "fuente_id": 154
+   },
+   {
+    "desde_km": 160.0,
+    "hasta_km": 200.0,
+    "nombre": "Devonian - Carboniferous Low to medium grade",
+    "litologia": "Low to medium grade metamorphic",
+    "edad": "Paleozoic",
+    "edad_ma": 419.62,
+    "color": "#99C08D",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 200.0,
+    "hasta_km": 245.0,
+    "nombre": "Neogene Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Neogene",
+    "edad_ma": 23.04,
+    "color": "#FFE619",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 245.0,
+    "hasta_km": 250.0,
+    "nombre": "Cretaceous Granitic",
+    "litologia": "Granite",
+    "edad": "Cretaceous",
+    "edad_ma": 143.1,
+    "color": "#7FC64E",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 250.0,
+    "hasta_km": 290.0,
+    "nombre": "Neogene Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Neogene",
+    "edad_ma": 23.04,
+    "color": "#FFE619",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 290.0,
+    "hasta_km": 300.0,
+    "nombre": "Quaternary Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Quaternary",
+    "edad_ma": 2.58,
+    "color": "#F9F97F",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 300.0,
+    "hasta_km": 305.0,
+    "nombre": "Jurassic - Cretaceous Andesitic and related",
+    "litologia": "Andesite and related volcanic",
+    "edad": "Mesozoic",
+    "edad_ma": 201.4,
+    "color": "#5ABC8C",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 305.0,
+    "hasta_km": 325.0,
+    "nombre": "Quaternary Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Quaternary",
+    "edad_ma": 2.58,
+    "color": "#F9F97F",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 325.0,
+    "hasta_km": 330.0,
+    "nombre": "Cretaceous Granitic",
+    "litologia": "Granite",
+    "edad": "Cretaceous",
+    "edad_ma": 143.1,
+    "color": "#7FC64E",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 330.0,
+    "hasta_km": 345.0,
+    "nombre": "Quaternary Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Quaternary",
+    "edad_ma": 2.58,
+    "color": "#F9F97F",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 345.0,
+    "hasta_km": 355.0,
+    "nombre": "Cretaceous Granitic",
+    "litologia": "Granite",
+    "edad": "Cretaceous",
+    "edad_ma": 143.1,
+    "color": "#7FC64E",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 355.0,
+    "hasta_km": 365.0,
+    "nombre": "Quaternary Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Quaternary",
+    "edad_ma": 2.58,
+    "color": "#F9F97F",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 365.0,
+    "hasta_km": 375.0,
+    "nombre": "Cretaceous Granitic",
+    "litologia": "Granite",
+    "edad": "Cretaceous",
+    "edad_ma": 143.1,
+    "color": "#7FC64E",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 375.0,
+    "hasta_km": 395.0,
+    "nombre": "Neogene - Quaternary Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Cenozoic",
+    "edad_ma": 23.04,
+    "color": "#F2F91D",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 395.0,
+    "hasta_km": 400.0,
+    "nombre": "Cretaceous Granitic",
+    "litologia": "Granite",
+    "edad": "Cretaceous",
+    "edad_ma": 143.1,
+    "color": "#7FC64E",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 400.0,
+    "hasta_km": 405.0,
+    "nombre": "Jurassic Undifferentiated",
+    "litologia": "Volcanic",
+    "edad": "Jurassic",
+    "edad_ma": 201.4,
+    "color": "#34B2C9",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 405.0,
+    "hasta_km": 413.52846058013955,
+    "nombre": "Cretaceous Granitic",
+    "litologia": "Granite",
+    "edad": "Cretaceous",
+    "edad_ma": 143.1,
+    "color": "#7FC64E",
+    "escala": "small",
+    "fuente_id": 1087
+   }
+  ],
+  "fallas_cruzadas": [],
+  "fallas_a_menos_de_10km": []
+ },
+ {
+  "id": "04",
+  "nombre": "Copiapó - Diego de Almagro",
+  "largo_km": 139.33320704923787,
+  "cota_min": 385.9322814941406,
+  "cota_max": 1785.4085693359375,
+  "subida_acum_m": 1824.6287231445312,
+  "bajada_acum_m": 1427.1827087402344,
+  "terreno_pct_sobre_2_5": 34.38395415472779,
+  "carga_1.5": {
+   "tunel_km": 35.0,
+   "viaducto_km": 69.8,
+   "tierra_km": 34.53320704923789,
+   "corte_terraplen_medio_m": 12.721210614211069,
+   "tuneles": [
+    [
+     45.2,
+     63.6
+    ],
+    [
+     75.0,
+     91.2
+    ],
+    [
+     115.4,
+     115.8
+    ]
+   ],
+   "viaductos": [
+    [
+     0.0,
+     41.8
+    ],
+    [
+     70.4,
+     71.4
+    ],
+    [
+     94.6,
+     107.6
+    ],
+    [
+     121.8,
+     122.2
+    ],
+    [
+     122.4,
+     136.0
+    ]
+   ]
+  },
+  "mixto_2.5": {
+   "tunel_km": 10.0,
+   "viaducto_km": 21.0,
+   "tierra_km": 108.33320704923788,
+   "corte_terraplen_medio_m": 4.112086806256794,
+   "tuneles": [
+    [
+     51.4,
+     58.2
+    ],
+    [
+     78.8,
+     79.0
+    ],
+    [
+     81.4,
+     84.4
+    ]
+   ],
+   "viaductos": [
+    [
+     36.2,
+     48.2
+    ],
+    [
+     70.6,
+     74.0
+    ],
+    [
+     92.2,
+     97.2
+    ],
+    [
+     123.8,
+     124.4
+    ]
+   ]
+  },
+  "cruces_cauces": [
+   {
+    "km": 1.8,
+    "cuenca_km2": 14.1,
+    "caudal_medio_m3s": 0.006,
+    "orden": 1
+   },
+   {
+    "km": 11.5,
+    "cuenca_km2": 6676.9,
+    "caudal_medio_m3s": 1.645,
+    "orden": 4
+   },
+   {
+    "km": 20.5,
+    "cuenca_km2": 80.9,
+    "caudal_medio_m3s": 0.024,
+    "orden": 2
+   },
+   {
+    "km": 20.9,
+    "cuenca_km2": 6206.1,
+    "caudal_medio_m3s": 1.436,
+    "orden": 4
+   },
+   {
+    "km": 23.5,
+    "cuenca_km2": 589.0,
+    "caudal_medio_m3s": 0.176,
+    "orden": 3
+   },
+   {
+    "km": 26.4,
+    "cuenca_km2": 33.0,
+    "caudal_medio_m3s": 0.009,
+    "orden": 1
+   },
+   {
+    "km": 26.7,
+    "cuenca_km2": 545.1,
+    "caudal_medio_m3s": 0.163,
+    "orden": 3
+   },
+   {
+    "km": 31.1,
+    "cuenca_km2": 18.3,
+    "caudal_medio_m3s": 0.005,
+    "orden": 1
+   },
+   {
+    "km": 31.2,
+    "cuenca_km2": 452.6,
+    "caudal_medio_m3s": 0.136,
+    "orden": 3
+   },
+   {
+    "km": 33.4,
+    "cuenca_km2": 138.5,
+    "caudal_medio_m3s": 0.039,
+    "orden": 2
+   },
+   {
+    "km": 34.0,
+    "cuenca_km2": 309.3,
+    "caudal_medio_m3s": 0.096,
+    "orden": 3
+   },
+   {
+    "km": 41.4,
+    "cuenca_km2": 19.9,
+    "caudal_medio_m3s": 0.005,
+    "orden": 1
+   },
+   {
+    "km": 46.8,
+    "cuenca_km2": 78.0,
+    "caudal_medio_m3s": 0.025,
+    "orden": 1
+   },
+   {
+    "km": 51.0,
+    "cuenca_km2": 78.0,
+    "caudal_medio_m3s": 0.025,
+    "orden": 1
+   },
+   {
+    "km": 59.0,
+    "cuenca_km2": 19.3,
+    "caudal_medio_m3s": 0.007,
+    "orden": 1
+   },
+   {
+    "km": 61.4,
+    "cuenca_km2": 175.0,
+    "caudal_medio_m3s": 0.064,
+    "orden": 2
+   },
+   {
+    "km": 65.3,
+    "cuenca_km2": 18.9,
+    "caudal_medio_m3s": 0.007,
+    "orden": 1
+   },
+   {
+    "km": 70.4,
+    "cuenca_km2": 43.6,
+    "caudal_medio_m3s": 0.016,
+    "orden": 2
+   },
+   {
+    "km": 71.5,
+    "cuenca_km2": 34.1,
+    "caudal_medio_m3s": 0.013,
+    "orden": 1
+   },
+   {
+    "km": 74.7,
+    "cuenca_km2": 40.2,
+    "caudal_medio_m3s": 0.015,
+    "orden": 1
+   },
+   {
+    "km": 86.3,
+    "cuenca_km2": 31.4,
+    "caudal_medio_m3s": 0.011,
+    "orden": 1
+   },
+   {
+    "km": 89.4,
+    "cuenca_km2": 69.5,
+    "caudal_medio_m3s": 0.027,
+    "orden": 2
+   },
+   {
+    "km": 92.5,
+    "cuenca_km2": 69.5,
+    "caudal_medio_m3s": 0.027,
+    "orden": 2
+   },
+   {
+    "km": 96.3,
+    "cuenca_km2": 32.4,
+    "caudal_medio_m3s": 0.012,
+    "orden": 2
+   },
+   {
+    "km": 100.3,
+    "cuenca_km2": 173.3,
+    "caudal_medio_m3s": 0.067,
+    "orden": 3
+   },
+   {
+    "km": 101.9,
+    "cuenca_km2": 275.1,
+    "caudal_medio_m3s": 0.112,
+    "orden": 3
+   },
+   {
+    "km": 102.7,
+    "cuenca_km2": 460.6,
+    "caudal_medio_m3s": 0.19,
+    "orden": 4
+   },
+   {
+    "km": 107.0,
+    "cuenca_km2": 172.4,
+    "caudal_medio_m3s": 0.064,
+    "orden": 2
+   },
+   {
+    "km": 107.1,
+    "cuenca_km2": 26.3,
+    "caudal_medio_m3s": 0.009,
+    "orden": 1
+   },
+   {
+    "km": 117.6,
+    "cuenca_km2": 13.1,
+    "caudal_medio_m3s": 0.004,
+    "orden": 1
+   },
+   {
+    "km": 122.7,
+    "cuenca_km2": 15.4,
+    "caudal_medio_m3s": 0.004,
+    "orden": 1
+   },
+   {
+    "km": 124.3,
+    "cuenca_km2": 1697.4,
+    "caudal_medio_m3s": 0.567,
+    "orden": 4
+   },
+   {
+    "km": 128.8,
+    "cuenca_km2": 2606.5,
+    "caudal_medio_m3s": 0.907,
+    "orden": 5
+   },
+   {
+    "km": 137.7,
+    "cuenca_km2": 6344.9,
+    "caudal_medio_m3s": 0.328,
+    "orden": 5
+   }
+  ],
+  "n_cruces_mayores": 5,
+  "suelo_blando_km": 25.0,
+  "volcanico_km": 100.0,
+  "geologia": [
+   {
+    "desde_km": 0.0,
+    "hasta_km": 5.0,
+    "nombre": "Cretaceous Granitic",
+    "litologia": "Granite",
+    "edad": "Cretaceous",
+    "edad_ma": 143.1,
+    "color": "#7FC64E",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 5.0,
+    "hasta_km": 15.0,
+    "nombre": "Jurassic - Cretaceous Andesitic and related",
+    "litologia": "Andesite and related volcanic",
+    "edad": "Mesozoic",
+    "edad_ma": 201.4,
+    "color": "#5ABC8C",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 15.0,
+    "hasta_km": 65.0,
+    "nombre": "Cretaceous Volcano-sedimentary",
+    "litologia": "Volcaniclastic, volcanic",
+    "edad": "Cretaceous",
+    "edad_ma": 143.1,
+    "color": "#7FC64E",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 65.0,
+    "hasta_km": 85.0,
+    "nombre": "Jurassic Undifferentiated",
+    "litologia": "Volcanic",
+    "edad": "Jurassic",
+    "edad_ma": 201.4,
+    "color": "#34B2C9",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 85.0,
+    "hasta_km": 110.0,
+    "nombre": "Quaternary Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Quaternary",
+    "edad_ma": 2.58,
+    "color": "#F9F97F",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 110.0,
+    "hasta_km": 125.0,
+    "nombre": "Neogene Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Neogene",
+    "edad_ma": 23.04,
+    "color": "#FFE619",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 125.0,
+    "hasta_km": 139.33320704923787,
+    "nombre": "Jurassic - Cretaceous Andesitic and related",
+    "litologia": "Andesite and related volcanic",
+    "edad": "Mesozoic",
+    "edad_ma": 201.4,
+    "color": "#5ABC8C",
+    "escala": "small",
+    "fuente_id": 1087
+   }
+  ],
+  "fallas_cruzadas": [],
+  "fallas_a_menos_de_10km": []
+ },
+ {
+  "id": "05",
+  "nombre": "Diego de Almagro - Antofagasta",
+  "largo_km": 370.7438359903973,
+  "cota_min": 5.4316864013671875,
+  "cota_max": 2179.818603515625,
+  "subida_acum_m": 2650.6889972686768,
+  "bajada_acum_m": 3424.8299369812016,
+  "terreno_pct_sobre_2_5": 13.584905660377359,
+  "carga_1.5": {
+   "tunel_km": 36.6,
+   "viaducto_km": 57.743835990397315,
+   "tierra_km": 276.4,
+   "corte_terraplen_medio_m": 6.423874509785205,
+   "tuneles": [
+    [
+     4.0,
+     4.6
+    ],
+    [
+     69.4,
+     75.0
+    ],
+    [
+     91.4,
+     91.6
+    ],
+    [
+     101.2,
+     101.8
+    ],
+    [
+     102.6,
+     102.8
+    ],
+    [
+     152.6,
+     152.8
+    ],
+    [
+     169.0,
+     169.2
+    ],
+    [
+     199.8,
+     210.8
+    ],
+    [
+     288.0,
+     288.2
+    ],
+    [
+     288.4,
+     289.4
+    ],
+    [
+     289.6,
+     289.8
+    ],
+    [
+     337.4,
+     354.0
+    ]
+   ],
+   "viaductos": [
+    [
+     2.4,
+     3.0
+    ],
+    [
+     3.2,
+     3.8
+    ],
+    [
+     46.0,
+     47.0
+    ],
+    [
+     55.4,
+     65.6
+    ],
+    [
+     76.2,
+     83.4
+    ],
+    [
+     157.8,
+     158.6
+    ],
+    [
+     224.4,
+     237.2
+    ],
+    [
+     321.6,
+     321.8
+    ],
+    [
+     322.0,
+     331.0
+    ],
+    [
+     331.2,
+     331.4
+    ],
+    [
+     355.6,
+     370.7438359903973
+    ]
+   ]
+  },
+  "mixto_2.5": {
+   "tunel_km": 15.6,
+   "viaducto_km": 9.2,
+   "tierra_km": 345.9438359903973,
+   "corte_terraplen_medio_m": 1.0632535239066687,
+   "tuneles": [
+    [
+     4.0,
+     4.4
+    ],
+    [
+     71.8,
+     73.4
+    ],
+    [
+     340.6,
+     354.2
+    ]
+   ],
+   "viaductos": [
+    [
+     3.2,
+     3.8
+    ],
+    [
+     66.2,
+     66.6
+    ],
+    [
+     66.8,
+     67.0
+    ],
+    [
+     356.6,
+     364.6
+    ]
+   ]
+  },
+  "cruces_cauces": [
+   {
+    "km": 2.4,
+    "cuenca_km2": 6344.9,
+    "caudal_medio_m3s": 0.328,
+    "orden": 5
+   },
+   {
+    "km": 10.2,
+    "cuenca_km2": 40.0,
+    "caudal_medio_m3s": 0.009,
+    "orden": 1
+   },
+   {
+    "km": 18.6,
+    "cuenca_km2": 13.9,
+    "caudal_medio_m3s": 0.003,
+    "orden": 1
+   },
+   {
+    "km": 19.1,
+    "cuenca_km2": 49.5,
+    "caudal_medio_m3s": 0.01,
+    "orden": 2
+   },
+   {
+    "km": 24.9,
+    "cuenca_km2": 296.6,
+    "caudal_medio_m3s": 0.053,
+    "orden": 3
+   },
+   {
+    "km": 26.6,
+    "cuenca_km2": 57.2,
+    "caudal_medio_m3s": 0.01,
+    "orden": 1
+   },
+   {
+    "km": 30.2,
+    "cuenca_km2": 57.2,
+    "caudal_medio_m3s": 0.01,
+    "orden": 1
+   },
+   {
+    "km": 38.2,
+    "cuenca_km2": 998.1,
+    "caudal_medio_m3s": 0.133,
+    "orden": 3
+   },
+   {
+    "km": 41.9,
+    "cuenca_km2": 87.0,
+    "caudal_medio_m3s": 0.014,
+    "orden": 2
+   },
+   {
+    "km": 43.1,
+    "cuenca_km2": 19.1,
+    "caudal_medio_m3s": 0.003,
+    "orden": 1
+   },
+   {
+    "km": 46.6,
+    "cuenca_km2": 3143.9,
+    "caudal_medio_m3s": 0.314,
+    "orden": 4
+   },
+   {
+    "km": 53.5,
+    "cuenca_km2": 79.7,
+    "caudal_medio_m3s": 0.012,
+    "orden": 1
+   },
+   {
+    "km": 56.2,
+    "cuenca_km2": 229.8,
+    "caudal_medio_m3s": 0.035,
+    "orden": 2
+   },
+   {
+    "km": 56.7,
+    "cuenca_km2": 169.2,
+    "caudal_medio_m3s": 0.025,
+    "orden": 2
+   },
+   {
+    "km": 61.2,
+    "cuenca_km2": 169.2,
+    "caudal_medio_m3s": 0.025,
+    "orden": 2
+   },
+   {
+    "km": 62.1,
+    "cuenca_km2": 58.7,
+    "caudal_medio_m3s": 0.009,
+    "orden": 2
+   },
+   {
+    "km": 63.6,
+    "cuenca_km2": 41.9,
+    "caudal_medio_m3s": 0.006,
+    "orden": 1
+   },
+   {
+    "km": 67.2,
+    "cuenca_km2": 41.9,
+    "caudal_medio_m3s": 0.006,
+    "orden": 1
+   },
+   {
+    "km": 78.5,
+    "cuenca_km2": 804.5,
+    "caudal_medio_m3s": 0.097,
+    "orden": 3
+   },
+   {
+    "km": 83.3,
+    "cuenca_km2": 758.9,
+    "caudal_medio_m3s": 0.091,
+    "orden": 3
+   },
+   {
+    "km": 92.4,
+    "cuenca_km2": 74.5,
+    "caudal_medio_m3s": 0.009,
+    "orden": 2
+   },
+   {
+    "km": 97.1,
+    "cuenca_km2": 42.2,
+    "caudal_medio_m3s": 0.005,
+    "orden": 1
+   },
+   {
+    "km": 108.5,
+    "cuenca_km2": 62.5,
+    "caudal_medio_m3s": 0.007,
+    "orden": 2
+   },
+   {
+    "km": 120.3,
+    "cuenca_km2": 50.9,
+    "caudal_medio_m3s": 0.006,
+    "orden": 1
+   },
+   {
+    "km": 121.4,
+    "cuenca_km2": 300.0,
+    "caudal_medio_m3s": 0.031,
+    "orden": 3
+   },
+   {
+    "km": 122.4,
+    "cuenca_km2": 387.6,
+    "caudal_medio_m3s": 0.037,
+    "orden": 2
+   },
+   {
+    "km": 128.5,
+    "cuenca_km2": 23.5,
+    "caudal_medio_m3s": 0.002,
+    "orden": 1
+   },
+   {
+    "km": 128.6,
+    "cuenca_km2": 37.0,
+    "caudal_medio_m3s": 0.004,
+    "orden": 1
+   },
+   {
+    "km": 130.1,
+    "cuenca_km2": 2097.5,
+    "caudal_medio_m3s": 0.155,
+    "orden": 5
+   },
+   {
+    "km": 133.8,
+    "cuenca_km2": 659.7,
+    "caudal_medio_m3s": 0.051,
+    "orden": 3
+   },
+   {
+    "km": 137.7,
+    "cuenca_km2": 537.9,
+    "caudal_medio_m3s": 0.037,
+    "orden": 3
+   },
+   {
+    "km": 154.2,
+    "cuenca_km2": 57.5,
+    "caudal_medio_m3s": 0.005,
+    "orden": 1
+   },
+   {
+    "km": 159.4,
+    "cuenca_km2": 116.4,
+    "caudal_medio_m3s": 0.009,
+    "orden": 2
+   },
+   {
+    "km": 161.0,
+    "cuenca_km2": 67.8,
+    "caudal_medio_m3s": 0.005,
+    "orden": 2
+   },
+   {
+    "km": 172.6,
+    "cuenca_km2": 150.0,
+    "caudal_medio_m3s": 0.008,
+    "orden": 2
+   },
+   {
+    "km": 175.1,
+    "cuenca_km2": 48.6,
+    "caudal_medio_m3s": 0.002,
+    "orden": 2
+   },
+   {
+    "km": 178.0,
+    "cuenca_km2": 36.0,
+    "caudal_medio_m3s": 0.001,
+    "orden": 1
+   },
+   {
+    "km": 181.3,
+    "cuenca_km2": 54.9,
+    "caudal_medio_m3s": 0.001,
+    "orden": 2
+   },
+   {
+    "km": 197.5,
+    "cuenca_km2": 186.5,
+    "caudal_medio_m3s": 0.002,
+    "orden": 3
+   },
+   {
+    "km": 198.8,
+    "cuenca_km2": 11.5,
+    "caudal_medio_m3s": 0.0,
+    "orden": 1
+   },
+   {
+    "km": 208.0,
+    "cuenca_km2": 70.9,
+    "caudal_medio_m3s": 0.0,
+    "orden": 1
+   },
+   {
+    "km": 215.3,
+    "cuenca_km2": 12.7,
+    "caudal_medio_m3s": 0.0,
+    "orden": 1
+   },
+   {
+    "km": 216.7,
+    "cuenca_km2": 521.3,
+    "caudal_medio_m3s": 0.001,
+    "orden": 3
+   },
+   {
+    "km": 221.4,
+    "cuenca_km2": 813.8,
+    "caudal_medio_m3s": 0.008,
+    "orden": 4
+   },
+   {
+    "km": 232.8,
+    "cuenca_km2": 43.9,
+    "caudal_medio_m3s": 0.0,
+    "orden": 1
+   },
+   {
+    "km": 238.2,
+    "cuenca_km2": 68.9,
+    "caudal_medio_m3s": 0.0,
+    "orden": 1
+   },
+   {
+    "km": 241.3,
+    "cuenca_km2": 68.9,
+    "caudal_medio_m3s": 0.0,
+    "orden": 1
+   },
+   {
+    "km": 245.2,
+    "cuenca_km2": 271.9,
+    "caudal_medio_m3s": 0.001,
+    "orden": 2
+   },
+   {
+    "km": 262.6,
+    "cuenca_km2": 369.2,
+    "caudal_medio_m3s": 0.001,
+    "orden": 3
+   },
+   {
+    "km": 266.8,
+    "cuenca_km2": 94.0,
+    "caudal_medio_m3s": 0.0,
+    "orden": 2
+   },
+   {
+    "km": 269.3,
+    "cuenca_km2": 29.1,
+    "caudal_medio_m3s": 0.0,
+    "orden": 1
+   },
+   {
+    "km": 275.7,
+    "cuenca_km2": 89.8,
+    "caudal_medio_m3s": 0.0,
+    "orden": 2
+   },
+   {
+    "km": 276.6,
+    "cuenca_km2": 43.6,
+    "caudal_medio_m3s": 0.0,
+    "orden": 1
+   },
+   {
+    "km": 280.6,
+    "cuenca_km2": 96.3,
+    "caudal_medio_m3s": 0.0,
+    "orden": 1
+   },
+   {
+    "km": 286.7,
+    "cuenca_km2": 19.4,
+    "caudal_medio_m3s": 0.0,
+    "orden": 1
+   },
+   {
+    "km": 289.1,
+    "cuenca_km2": 277.4,
+    "caudal_medio_m3s": 0.002,
+    "orden": 2
+   },
+   {
+    "km": 292.4,
+    "cuenca_km2": 307.3,
+    "caudal_medio_m3s": 0.002,
+    "orden": 2
+   },
+   {
+    "km": 294.2,
+    "cuenca_km2": 380.0,
+    "caudal_medio_m3s": 0.002,
+    "orden": 2
+   },
+   {
+    "km": 297.4,
+    "cuenca_km2": 407.0,
+    "caudal_medio_m3s": 0.002,
+    "orden": 2
+   },
+   {
+    "km": 299.6,
+    "cuenca_km2": 19.2,
+    "caudal_medio_m3s": 0.0,
+    "orden": 1
+   },
+   {
+    "km": 301.0,
+    "cuenca_km2": 450.1,
+    "caudal_medio_m3s": 0.002,
+    "orden": 2
+   },
+   {
+    "km": 306.4,
+    "cuenca_km2": 14.3,
+    "caudal_medio_m3s": 0.0,
+    "orden": 1
+   },
+   {
+    "km": 307.6,
+    "cuenca_km2": 551.8,
+    "caudal_medio_m3s": 0.002,
+    "orden": 2
+   },
+   {
+    "km": 311.2,
+    "cuenca_km2": 566.7,
+    "caudal_medio_m3s": 0.002,
+    "orden": 2
+   },
+   {
+    "km": 312.6,
+    "cuenca_km2": 1163.4,
+    "caudal_medio_m3s": 0.005,
+    "orden": 3
+   },
+   {
+    "km": 316.2,
+    "cuenca_km2": 21.4,
+    "caudal_medio_m3s": 0.0,
+    "orden": 1
+   },
+   {
+    "km": 317.0,
+    "cuenca_km2": 1188.9,
+    "caudal_medio_m3s": 0.005,
+    "orden": 3
+   },
+   {
+    "km": 320.2,
+    "cuenca_km2": 1232.2,
+    "caudal_medio_m3s": 0.005,
+    "orden": 3
+   },
+   {
+    "km": 320.5,
+    "cuenca_km2": 1516.3,
+    "caudal_medio_m3s": 0.005,
+    "orden": 3
+   },
+   {
+    "km": 326.6,
+    "cuenca_km2": 61.6,
+    "caudal_medio_m3s": 0.0,
+    "orden": 1
+   },
+   {
+    "km": 327.8,
+    "cuenca_km2": 1768.9,
+    "caudal_medio_m3s": 0.005,
+    "orden": 3
+   },
+   {
+    "km": 331.4,
+    "cuenca_km2": 1768.9,
+    "caudal_medio_m3s": 0.005,
+    "orden": 3
+   },
+   {
+    "km": 333.9,
+    "cuenca_km2": 42.0,
+    "caudal_medio_m3s": 0.0,
+    "orden": 2
+   },
+   {
+    "km": 334.8,
+    "cuenca_km2": 1843.1,
+    "caudal_medio_m3s": 0.005,
+    "orden": 3
+   },
+   {
+    "km": 346.2,
+    "cuenca_km2": 75.8,
+    "caudal_medio_m3s": 0.0,
+    "orden": 2
+   },
+   {
+    "km": 348.6,
+    "cuenca_km2": 32.4,
+    "caudal_medio_m3s": 0.0,
+    "orden": 1
+   },
+   {
+    "km": 358.5,
+    "cuenca_km2": 180.8,
+    "caudal_medio_m3s": 0.0,
+    "orden": 2
+   }
+  ],
+  "n_cruces_mayores": 10,
+  "suelo_blando_km": 10.0,
+  "volcanico_km": 155.0,
+  "geologia": [
+   {
+    "desde_km": 0.0,
+    "hasta_km": 40.0,
+    "nombre": "Jurassic - Cretaceous Andesitic and related",
+    "litologia": "Andesite and related volcanic",
+    "edad": "Mesozoic",
+    "edad_ma": 201.4,
+    "color": "#5ABC8C",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 40.0,
+    "hasta_km": 50.0,
+    "nombre": "Neogene Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Neogene",
+    "edad_ma": 23.04,
+    "color": "#FFE619",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 50.0,
+    "hasta_km": 60.0,
+    "nombre": "Jurassic Undifferentiated",
+    "litologia": "Volcanic",
+    "edad": "Jurassic",
+    "edad_ma": 201.4,
+    "color": "#34B2C9",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 60.0,
+    "hasta_km": 120.0,
+    "nombre": "Jurassic - Cretaceous Andesitic and related",
+    "litologia": "Andesite and related volcanic",
+    "edad": "Mesozoic",
+    "edad_ma": 201.4,
+    "color": "#5ABC8C",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 120.0,
+    "hasta_km": 135.0,
+    "nombre": "Neogene Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Neogene",
+    "edad_ma": 23.04,
+    "color": "#FFE619",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 135.0,
+    "hasta_km": 140.0,
+    "nombre": "Devonian - Carboniferous Low to medium grade",
+    "litologia": "Low to medium grade metamorphic",
+    "edad": "Paleozoic",
+    "edad_ma": 419.62,
+    "color": "#99C08D",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 140.0,
+    "hasta_km": 150.0,
+    "nombre": "Paleogene Andesitic and related",
+    "litologia": "Andesite and related volcanic",
+    "edad": "Paleogene",
+    "edad_ma": 66,
+    "color": "#FD9A52",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 150.0,
+    "hasta_km": 160.0,
+    "nombre": "Devonian - Carboniferous Low to medium grade",
+    "litologia": "Low to medium grade metamorphic",
+    "edad": "Paleozoic",
+    "edad_ma": 419.62,
+    "color": "#99C08D",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 160.0,
+    "hasta_km": 185.0,
+    "nombre": "Paleogene Andesitic and related",
+    "litologia": "Andesite and related volcanic",
+    "edad": "Paleogene",
+    "edad_ma": 66,
+    "color": "#FD9A52",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 185.0,
+    "hasta_km": 195.0,
+    "nombre": "Cretaceous Rhyolitic",
+    "litologia": "Rhyolite",
+    "edad": "Cretaceous",
+    "edad_ma": 143.1,
+    "color": "#7FC64E",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 195.0,
+    "hasta_km": 200.0,
+    "nombre": "Paleogene - Neogene Rhyolitic",
+    "litologia": "Rhyolite",
+    "edad": "Cenozoic",
+    "edad_ma": 66,
+    "color": "#F4B470",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 200.0,
+    "hasta_km": 235.0,
+    "nombre": "Cretaceous Rhyolitic",
+    "litologia": "Rhyolite",
+    "edad": "Cretaceous",
+    "edad_ma": 143.1,
+    "color": "#7FC64E",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 235.0,
+    "hasta_km": 255.0,
+    "nombre": "Neogene Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Neogene",
+    "edad_ma": 23.04,
+    "color": "#FFE619",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 255.0,
+    "hasta_km": 265.0,
+    "nombre": "Cretaceous Granitic",
+    "litologia": "Granite",
+    "edad": "Cretaceous",
+    "edad_ma": 143.1,
+    "color": "#7FC64E",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 265.0,
+    "hasta_km": 280.0,
+    "nombre": "Neogene Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Neogene",
+    "edad_ma": 23.04,
+    "color": "#FFE619",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 280.0,
+    "hasta_km": 355.0,
+    "nombre": "Jurassic Granitic",
+    "litologia": "Granite",
+    "edad": "Jurassic",
+    "edad_ma": 201.4,
+    "color": "#34B2C9",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 355.0,
+    "hasta_km": 365.0,
+    "nombre": "Jurassic Undifferentiated",
+    "litologia": "Volcanic",
+    "edad": "Jurassic",
+    "edad_ma": 201.4,
+    "color": "#34B2C9",
+    "escala": "small",
+    "fuente_id": 1087
+   },
+   {
+    "desde_km": 365.0,
+    "hasta_km": 370.0,
+    "nombre": "Sin dato",
+    "litologia": "",
+    "edad": "",
+    "edad_ma": null,
+    "color": "#cccccc",
+    "escala": null,
+    "fuente_id": null
+   },
+   {
+    "desde_km": 370.0,
+    "hasta_km": 370.7438359903973,
+    "nombre": "Neogene - Quaternary Siliciclastic",
+    "litologia": "Siliciclastic",
+    "edad": "Cenozoic",
+    "edad_ma": 23.04,
+    "color": "#F2F91D",
+    "escala": "small",
+    "fuente_id": 1087
+   }
+  ],
+  "fallas_cruzadas": [
+   {
+    "nombre": "Coloso",
+    "tipo": "Normal",
+    "dist_km": 0.0,
+    "km": 316.1
+   }
+  ],
+  "fallas_a_menos_de_10km": [
+   {
+    "nombre": NaN,
+    "tipo": "Normal",
+    "dist_km": 2.8,
+    "km": 315.4
+   },
+   {
+    "nombre": "de Atacama segmento Salar del Carmen?",
+    "tipo": "Normal",
+    "dist_km": 2.2,
+    "km": 370.7
+   },
+   {
+    "nombre": "Bolfin",
+    "tipo": "Normal",
+    "dist_km": 7.1,
+    "km": 347.1
+   }
+  ]
+ }
+]

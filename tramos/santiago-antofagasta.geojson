@@ -1,0 +1,17 @@
+{
+  "type": "FeatureCollection",
+  "name": "santiago-antofagasta",
+  "description": "Trazado preliminar v1: puntos de paso a lo largo del corredor Ruta 5 / antiguo Longitudinal Norte, unidos en línea recta. Coordenadas aproximadas.",
+  "features": [
+    {"type": "Feature", "properties": {"id": "01", "nombre": "Santiago - La Calera"},
+     "geometry": {"type": "LineString", "coordinates": [[-70.6797,-33.4525],[-70.73,-33.355],[-70.875,-33.285],[-70.928,-33.084],[-70.91,-32.96],[-70.957,-32.842],[-71.19,-32.787]]}},
+    {"type": "Feature", "properties": {"id": "02", "nombre": "La Calera - La Serena"},
+     "geometry": {"type": "LineString", "coordinates": [[-71.19,-32.787],[-71.20,-32.73],[-71.231,-32.452],[-71.45,-32.34],[-71.51,-31.912],[-71.53,-31.585],[-71.46,-31.40],[-71.55,-31.05],[-71.49,-30.73],[-71.43,-30.40],[-71.42,-30.20],[-71.34,-29.96],[-71.25,-29.905]]}},
+    {"type": "Feature", "properties": {"id": "03", "nombre": "La Serena - Copiapó"},
+     "geometry": {"type": "LineString", "coordinates": [[-71.25,-29.905],[-71.27,-29.75],[-71.29,-29.62],[-71.12,-29.37],[-71.03,-29.22],[-70.91,-29.03],[-70.89,-28.95],[-70.76,-28.575],[-70.55,-28.05],[-70.45,-27.70],[-70.332,-27.366]]}},
+    {"type": "Feature", "properties": {"id": "04", "nombre": "Copiapó - Diego de Almagro"},
+     "geometry": {"type": "LineString", "coordinates": [[-70.332,-27.366],[-70.05,-27.05],[-69.91,-26.75],[-70.05,-26.39]]}},
+    {"type": "Feature", "properties": {"id": "05", "nombre": "Diego de Almagro - Antofagasta"},
+     "geometry": {"type": "LineString", "coordinates": [[-70.05,-26.39],[-70.05,-25.95],[-69.96,-25.39],[-70.00,-24.85],[-70.15,-24.25],[-70.31,-23.76],[-70.40,-23.65]]}}
+  ]
+}

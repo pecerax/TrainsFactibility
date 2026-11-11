@@ -1,0 +1,16 @@
+{
+  "name": "santiago-antofagasta-v2",
+  "description": "Trazado v2: corredor de menor costo por pendiente sobre el DEM, pasando por ciudades que serían estaciones. Puntos aproximados.",
+  "subtramos": [
+    {"id": "01", "nombre": "Santiago - La Calera",
+     "puntos": [["Santiago (Alameda)", -70.6797, -33.4525], ["Til Til", -70.928, -33.084], ["Llay Llay", -70.957, -32.842], ["La Calera", -71.19, -32.787]]},
+    {"id": "02", "nombre": "La Calera - La Serena",
+     "puntos": [["La Calera", -71.19, -32.787], ["La Ligua", -71.231, -32.452], ["Los Vilos", -71.51, -31.912], ["Coquimbo", -71.34, -29.96], ["La Serena", -71.25, -29.905]]},
+    {"id": "03", "nombre": "La Serena - Copiapó",
+     "puntos": [["La Serena", -71.25, -29.905], ["Vallenar", -70.76, -28.575], ["Copiapó", -70.332, -27.366]]},
+    {"id": "04", "nombre": "Copiapó - Diego de Almagro",
+     "puntos": [["Copiapó", -70.332, -27.366], ["Diego de Almagro", -70.05, -26.39]]},
+    {"id": "05", "nombre": "Diego de Almagro - Antofagasta",
+     "puntos": [["Diego de Almagro", -70.05, -26.39], ["Antofagasta", -70.40, -23.65]]}
+  ]
+}
