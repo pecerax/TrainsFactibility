@@ -17,12 +17,24 @@ El nivel de análisis es **idea / perfil temprano**. Sirve para comparar corredo
 
 El corredor v2 es un 29 % más largo pero reduce las obras mayores (túnel + viaducto) de 625 km a 107 km. Los puntos más exigentes son la subida desde Copiapó hacia Diego de Almagro y la bajada final a Antofagasta por el farellón costero.
 
-Abre [`mapa/index.html`](mapa/index.html) en el navegador para ver las capas y los trazados (archivo único, no requiere servidor).
+## Trazado interactivo de alta velocidad
+
+Abre [`mapa/index.html`](mapa/index.html) en el navegador (archivo único, no requiere servidor). Haz click en un origen y un destino y el mapa calcula, en menos de un segundo:
+
+1. **Corredor de menor costo** sobre una grilla de elevación de Chile de ~1,3 km (A* con 16 vecinos). El costo de cada paso crece con el cuadrado de su pendiente respecto de la pendiente máxima, con un tope que equivale a ir en túnel o viaducto.
+2. **Trazado en planta** con rectas y curvas circulares. El radio mínimo sale de `R = V² · 11,8 / (D + I)` con peralte más insuficiencia de 200 mm: 3.700 m a 250 km/h, 5.300 m a 300 km/h y 7.250 m a 350 km/h, en línea con las líneas AVE, LGV y Shinkansen. Se exige una recta mínima de 0,6·V m entre curvas y se amplía el radio hasta 1,6·Rmin donde cabe.
+3. **Rasante óptima**: la línea más cercana al terreno en mínimos cuadrados con pendiente máxima de 2,5 %, 3,5 % o 4 % (dual resuelto con FISTA). Más de 25 m bajo el terreno es túnel; más de 15 m sobre él, viaducto.
+4. **Velocidad y tiempo de viaje** con límite por curva, aceleración limitada por potencia y frenado de servicio, sin paradas intermedias.
+5. **Cruces** de ríos con cuenca sobre 1.000 km² y de fallas activas.
+6. **Costo de orden de magnitud** con valores unitarios típicos de alta velocidad (20 / 45 / 75 MUSD por km de superficie / viaducto / túnel, puentes mayores, terminales y 30 % de contingencia), con rango de −30 % a +50 %.
+
+El botón *Copiar GeoJSON* entrega el eje para pasarlo a `scripts/evaluar_tramo.py`, que agrega geología a mayor detalle y el perfil en PNG. El motor está en [`web/motor.js`](web/motor.js) y se puede usar también desde Node.
 
 ## Estructura
 
 ```
-trenes/            módulos: DEM, geología, rasante, corredor de menor costo, teselas del mapa
+trenes/            módulos: DEM, geología, rasante, corredor de menor costo, teselas y grilla del mapa
+web/               motor de trazado de alta velocidad (JS) y plantilla del mapa
 scripts/
   preparar_capas.py     descarga y recorta ríos, cuencas y fallas a Chile
   trazar_corredor.py    genera un trazado de menor costo desde un archivo de paradas
@@ -57,7 +69,8 @@ Para probar un tramo nuevo: copia un archivo `tramos/*_paradas.json`, cambia las
 
 ## Limitaciones conocidas
 
-- Sin radios de curva ni geometría vertical de diseño; las longitudes de obra son indicativas.
+- El trazado interactivo usa curvas circulares sin clotoides de transición ni curvas verticales de diseño; las longitudes de obra son indicativas.
+- La grilla de ~1,3 km no ve quebradas angostas ni cerros pequeños.
 - El mapa geológico es de escala 1:1.000.000; un estudio de prefactibilidad necesita cartas 1:100.000 o 1:250.000 de Sernageomin.
 - HydroRIVERS es un modelo global; en el norte muchas quebradas son secas la mayor parte del año pero tienen riesgo de aluvión.
 - No incluye todavía: uso de suelo, áreas protegidas (SNASPE), tierras indígenas, faja ferroviaria existente de EFE/Ferronor ni demanda.
