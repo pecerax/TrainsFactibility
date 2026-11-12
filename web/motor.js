@@ -41,6 +41,58 @@
     return ws > 0.25 ? s / ws : NaN;
   }
 
+  // ---------------- restricciones territoriales ----------------
+  // Banderas por celda (las arma trenes/grilla.py): 1 área protegida estricta, 2 área sensible,
+  // 4 Área de Desarrollo Indígena, 8 área urbana, 16 faja ferroviaria existente.
+  const B = { estricta: 1, sensible: 2, indigena: 4, urbano: 8, ffcc: 16 };
+  function multTerritorio(f) {
+    if (!f) return 1;
+    let m = 1;
+    if (f & B.estricta) m *= 6;      // parque o reserva: se rodea salvo que el desvío sea enorme
+    if (f & B.sensible) m *= 1.4;
+    if (f & B.indigena) m *= 1.4;    // consulta indígena (Convenio 169)
+    if (f & B.urbano) m *= (f & B.ffcc) ? 1.15 : 3; // en ciudad se prefiere entrar por la faja ferroviaria
+    return m;
+  }
+  function bandera(G, lon, lat) {
+    if (!G.b) return 0;
+    const x = Math.floor((lon - G.lon0) / G.paso), y = Math.floor((G.lat0 - lat) / G.paso);
+    if (x < 0 || y < 0 || x >= G.w || y >= G.h) return 0;
+    return G.b[y * G.w + x];
+  }
+
+  function dentroPoligono(lon, lat, coords) {
+    // coords: anillos [ [ [lon,lat], ... ], ... ]; regla par-impar con todos los anillos
+    let dentro = false;
+    for (const anillo of coords) {
+      for (let i = 0, j = anillo.length - 1; i < anillo.length; j = i++) {
+        const [xi, yi] = anillo[i], [xj, yj] = anillo[j];
+        if ((yi > lat) !== (yj > lat) && lon < (xj - xi) * (lat - yi) / (yj - yi) + xi) dentro = !dentro;
+      }
+    }
+    return dentro;
+  }
+  function nombresEn(geo, puntos) {
+    // nombres de los polígonos que contienen algún punto, con el km del primer contacto
+    const out = new Map();
+    if (!geo) return [];
+    for (const f of geo.features) {
+      const g = f.geometry; if (!g) continue;
+      const polys = g.type === 'Polygon' ? [g.coordinates] : g.type === 'MultiPolygon' ? g.coordinates : [];
+      let x0 = Infinity, x1 = -Infinity, y0 = Infinity, y1 = -Infinity;
+      for (const p of polys) for (const [x, y] of p[0]) { x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y); }
+      for (const pt of puntos) {
+        if (pt.lon < x0 || pt.lon > x1 || pt.lat < y0 || pt.lat > y1) continue;
+        if (polys.some(p => dentroPoligono(pt.lon, pt.lat, p))) {
+          const clave = f.properties.NOMBRE + '|' + (f.properties.tipo_nombre || '');
+          if (!out.has(clave)) out.set(clave, { nombre: f.properties.NOMBRE, tipo: f.properties.tipo_nombre || '', km: pt.km });
+          break;
+        }
+      }
+    }
+    return [...out.values()].sort((a, b) => a.km - b.km);
+  }
+
   // ---------------- corredor de menor costo (A*) ----------------
   function corredor(G, a, b, prm, prioridad) {
     // prioridad: 0 = lo más directo posible, 1 = evita al máximo túneles y viaductos
@@ -111,7 +163,7 @@
         if (mar) z1 = 0;
         const d = Math.hypot(vx * dxFila[y], vy * dy);
         const g = Math.abs(z1 - z0) / d / prm.pendMax;
-        const c = d * Math.min(TOPE, 1 + k * g * g);
+        const c = d * Math.min(TOPE, 1 + k * g * g) * (G.b ? multTerritorio(G.b[(ny + cy0) * G.w + (nx + cx0)]) : 1);
         const nd = dist[i] + c;
         if (nd < dist[j]) { dist[j] = nd; prev[j] = i; push(j, nd + heur(nx, ny)); }
       }
@@ -344,11 +396,16 @@
 
   // ---------------- costo (orden de magnitud, USD millones de 2025) ----------------
   // Referencias de líneas AV europeas y asiáticas: superficie 15-25, viaducto 35-60, túnel 50-100 MUSD/km.
-  const COSTO = { tierra: 20, viaducto: 45, tunel: 75, puente_rio: 25, terminal: 250, contingencia: 0.30 };
+  // Expropiación: faja rural de ~60 m (suelo agrícola, 1 MUSD/km con mejoras y servidumbres) y
+  // tramo urbano (compras, demoliciones, soterramientos parciales y obras de reposición, ~30 MUSD/km adicionales).
+  const COSTO = { tierra: 20, viaducto: 45, tunel: 75, puente_rio: 25, terminal: 250, contingencia: 0.30,
+                  expropiacion_rural: 1, urbano_extra: 30, estacion: 60 };
 
-  function costo(km, rios) {
+  function costo(km, rios, kmUrbano, estaciones) {
     const base = km.tierra * COSTO.tierra + km.viaducto * COSTO.viaducto + km.tunel * COSTO.tunel
-      + rios * COSTO.puente_rio + 2 * COSTO.terminal;
+      + rios * COSTO.puente_rio + 2 * COSTO.terminal + (estaciones || 0) * COSTO.estacion
+      + (km.tierra + km.viaducto + km.tunel - (kmUrbano || 0)) * COSTO.expropiacion_rural
+      + (kmUrbano || 0) * COSTO.urbano_extra;
     const total = base * (1 + COSTO.contingencia);
     return { total, bajo: total * 0.7, alto: total * 1.5 };
   }
@@ -402,8 +459,52 @@
     }
     if (capas && capas.fallas) fallas = cruces(eje, kmKm, capas.fallas, proj);
 
+    // territorio: km por categoría y nombres de las áreas atravesadas
+    const kmTerr = { estricta: 0, sensible: 0, indigena: 0, urbano: 0, ffcc: 0 };
+    const marcados = { estricta: [], sensible: [], indigena: [] };
+    for (let i = 1; i < geo.length; i++) {
+      const f = bandera(G, geo[i].lon, geo[i].lat), dk = kmKm[i] - kmKm[i - 1];
+      for (const [n, v] of Object.entries(B)) if (f & v) kmTerr[n] += dk;
+      if (i % 5 === 0) for (const n of ['estricta', 'sensible', 'indigena']) if (f & B[n]) marcados[n].push({ ...geo[i], km: kmKm[i] });
+    }
+    const protegidas = capas ? nombresEn(capas.protegidas, [...marcados.estricta, ...marcados.sensible]) : [];
+    const indigenas = capas ? nombresEn(capas.indigenas, marcados.indigena) : [];
+
+    // ciudades del corredor (candidatas a estación) y población servida
+    const ciudades = [];
+    if (capas && capas.ciudades) {
+      const pasoC = 10; // cada 1 km
+      for (const ci of capas.ciudades) {
+        if (ci.pob < 15000) continue;
+        const q = proj.a(ci);
+        let dmin = Infinity, kmin = 0;
+        for (let i = 0; i < eje.length; i += pasoC) {
+          const d = Math.hypot(eje[i].x - q.x, eje[i].y - q.y);
+          if (d < dmin) { dmin = d; kmin = kmKm[i]; }
+        }
+        if (dmin <= 10000) ciudades.push({ ...ci, km: kmin, dist_km: dmin / 1000 });
+      }
+      ciudades.sort((a, b) => a.km - b.km);
+    }
+    const poblacion = ciudades.reduce((a, c) => a + c.pob, 0);
+    // estaciones intermedias: ciudades de más de 100 mil habitantes separadas al menos 40 km
+    const estaciones = [];
+    for (const ci of ciudades) {
+      if (ci.pob < 100000 || ci.km < 20 || ci.km > largo / 1000 - 20) continue;
+      if (estaciones.length && ci.km - estaciones.at(-1).km < 40) { if (ci.pob > estaciones.at(-1).pob) estaciones[estaciones.length - 1] = ci; continue; }
+      estaciones.push(ci);
+    }
+
     const rUsados = curvas.map(c => c.R);
-    const c = costo(kmClase, rios.length);
+    const c = costo(kmClase, rios.length, kmTerr.urbano, estaciones.length);
+    // pasajeros al año que harían falta para pagar la obra con pasajes (sin subsidio):
+    // anualidad de capital al 4 % en 50 años + operación y mantención 1,5 % anual,
+    // tarifa US$ 0,15 por pasajero-km y viaje medio de 70 % del largo de la línea.
+    const anualidad = 0.04 / (1 - Math.pow(1.04, -50));
+    const costoAnual = c.total * (anualidad + 0.015);           // MUSD/año
+    const ingresoPorViaje = 0.15 * 0.7 * largo / 1000 / 1e6;    // MUSD por pasajero
+    const demanda = { pasajeros_necesarios: costoAnual / ingresoPorViaje, poblacion, viajes_por_habitante: poblacion ? (costoAnual / ingresoPorViaje) / poblacion : null,
+                      supuestos: { tasa: 0.04, anos: 50, oym: 0.015, tarifa_km: 0.15, viaje_medio: 0.7 } };
     return {
       prm, ms: Date.now() - t0,
       largo_km: largo / 1000,
@@ -414,9 +515,10 @@
       cota_min: Math.min(...z), cota_max: Math.max(...z),
       minutos: vel.segundos / 60, v_media: (largo / 1000) / (vel.segundos / 3600),
       rios, fallas, costo: c,
+      territorio: { km: kmTerr, protegidas, indigenas }, ciudades, estaciones, demanda,
     };
   }
 
-  raiz.MotorAV = { parametros, vCurva, cota, corredor, douglasPeucker, ajustarCurvas, densificar, rasante, perfilVelocidad, cruces, costo, trazar, COSTO };
+  raiz.MotorAV = { B, multTerritorio, bandera, parametros, vCurva, cota, corredor, douglasPeucker, ajustarCurvas, densificar, rasante, perfilVelocidad, cruces, costo, trazar, COSTO };
   if (typeof module !== 'undefined') module.exports = raiz.MotorAV;
 })(typeof window !== 'undefined' ? window : globalThis);

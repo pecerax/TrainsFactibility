@@ -30,6 +30,28 @@ Abre [`mapa/index.html`](mapa/index.html) en el navegador (archivo único, no re
 
 El botón *Copiar GeoJSON* entrega el eje para pasarlo a `scripts/evaluar_tramo.py`, que agrega geología a mayor detalle y el perfil en PNG. El motor está en [`web/motor.js`](web/motor.js) y se puede usar también desde Node.
 
+## Datos territoriales
+
+`python scripts/preparar_capas_territoriales.py` descarga y deja en `data/procesado/`:
+
+| Capa | Fuente | Uso en el trazado |
+|---|---|---|
+| Áreas protegidas (986) | SIT del MOP, servicio `MAPA_BASE/SNASPE` | Parques, reservas, monumentos, santuarios y sitios Ramsar multiplican el costo por 6 (se rodean); sitios prioritarios y áreas de conservación por 1,4 |
+| Áreas de Desarrollo Indígena (10) | Misma capa del MOP | Costo × 1,4 y aviso de consulta indígena (Convenio 169) |
+| Red ferroviaria (~9.000 km) | IGM 1:50.000 vía SIT MOP | Dentro de ciudades, entrar por la faja existente cuesta casi lo mismo que en campo abierto |
+| Áreas urbanas (392) | SIT MOP, `MAPA_BASE/ASENTAMIENTOS` | Costo × 3 fuera de la faja ferroviaria; +30 MUSD/km de expropiación y obras urbanas |
+| Población 2025 (1 km) | GHSL GHS-POP R2023A, JRC | Habitantes de cada ciudad del corredor, estaciones sugeridas y pasajeros necesarios para pagar la obra |
+
+Las capas se queman como banderas en el canal azul de la grilla de elevación del mapa, así que el navegador las usa sin descargar nada.
+
+### Lo que falta y cómo conseguirlo
+
+- **Geología 1:250.000 / 1:100.000 de Sernageomin**: su portal y su servidor SIG no responden desde fuera de Chile. Se pueden bajar a mano desde el [Geoportal de Sernageomin](https://portalgeo.sernageomin.cl/) o la tienda digital, y dejar los shapefiles en `data/cache/`.
+- **Tierras y comunidades indígenas fuera de las ADI**: CONADI no publica la capa en servicio abierto. El MMA tiene una capa de pueblos originarios en `arcgis.mma.gob.cl`, pero pide clave; se solicita por Ley de Transparencia.
+- **Valor del suelo**: los avalúos fiscales del SII no son descargables en bloque. Hoy se usa un costo por km rural y urbano.
+- **Demanda real**: la Encuesta Origen-Destino interurbana de SECTRA/MTT y los conteos de buses y vuelos (JAC) permitirían pasar del umbral de pasajeros necesarios a una proyección.
+- **Proyectos ferroviarios en curso**: la cartera de EFE no está en formato geográfico; se puede digitalizar desde sus memorias.
+
 ## Estructura
 
 ```
@@ -51,6 +73,7 @@ data/cache/        descargas pesadas (no versionadas)
 ```bash
 pip install -r requirements.txt
 python scripts/preparar_capas.py                                  # una vez
+python scripts/preparar_capas_territoriales.py                    # una vez
 python scripts/trazar_corredor.py tramos/santiago-antofagasta_paradas.json
 python scripts/evaluar_tramo.py tramos/santiago-antofagasta-v2.geojson
 python scripts/construir_mapa.py

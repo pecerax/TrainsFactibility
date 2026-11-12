@@ -9,16 +9,17 @@ __LEAFLET_CSS__
     --bg: #eef0ec; --panel: #fbfcfa; --ink: #1f2a26; --muted: #5d6b65; --rule: #d5dcd7;
     --accent: #1d6f5f; --accent-ink: #ffffff; --tunel: #b8402f; --viaducto: #7a4fa0; --tierra: #1f2a26;
     --rio: #2b77b0; --falla: #d9822b; --terreno: #cdbf9f; --vel: #1d6f5f;
+    --protegida: #3f8a3a; --indigena: #c2571a; --urbano: #6b6f7a; --ffcc: #3b2f2a;
     --sans: "IBM Plex Sans", system-ui, sans-serif; --mono: "IBM Plex Mono", ui-monospace, monospace;
   }
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
     --bg: #141a18; --panel: #1c2421; --ink: #e5ece8; --muted: #9aa8a2; --rule: #2e3a36;
     --accent: #5fbfa8; --accent-ink: #0f1513; --tunel: #e2735f; --viaducto: #b48ad8; --tierra: #e5ece8;
-    --terreno: #5a5240; --vel: #5fbfa8; color-scheme: dark } }
+    --terreno: #5a5240; --vel: #5fbfa8; --protegida: #6cc36a; --indigena: #f08a4b; --urbano: #a3a7b3; --ffcc: #d8c9bf; color-scheme: dark } }
   :root[data-theme="dark"] {
     --bg: #141a18; --panel: #1c2421; --ink: #e5ece8; --muted: #9aa8a2; --rule: #2e3a36;
     --accent: #5fbfa8; --accent-ink: #0f1513; --tunel: #e2735f; --viaducto: #b48ad8; --tierra: #e5ece8;
-    --terreno: #5a5240; --vel: #5fbfa8; color-scheme: dark }
+    --terreno: #5a5240; --vel: #5fbfa8; --protegida: #6cc36a; --indigena: #f08a4b; --urbano: #a3a7b3; --ffcc: #d8c9bf; color-scheme: dark }
   html, body { height: 100%; }
   body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.45 var(--sans); }
   #mapa { position: fixed; inset: 0; background: var(--bg); cursor: crosshair; }
@@ -116,6 +117,9 @@ __LEAFLET_CSS__
       <div class="grafico"><h2>Perfil longitudinal</h2><div id="perfil"></div></div>
       <div class="grafico"><h2>Velocidad</h2><div id="velocidad"></div></div>
       <div><h2>Puntos a revisar</h2><ul class="lista" id="alertas"></ul></div>
+      <div><h2>Territorio</h2><ul class="lista" id="territorio"></ul></div>
+      <div><h2>Ciudades en el corredor</h2><div class="tabla" id="ciudades"></div></div>
+      <div><h2>¿Se paga con pasajes?</h2><p id="demanda" class="sub"></p></div>
       <div><h2>Costo de orden de magnitud</h2><p id="costo" class="sub"></p></div>
     </div>
   </div>
@@ -126,7 +130,7 @@ __LEAFLET_CSS__
       <div class="tabla" id="tabla"></div>
     </div>
   </details>
-  <p class="nota">Nivel idea: grilla de elevación de ~1,3 km, curvas circulares sin clotoides, sin estaciones intermedias. Capas en el botón de capas del mapa.</p>
+  <p class="nota">Nivel idea: grilla de ~1,3 km, curvas circulares sin clotoides. El trazado rodea parques y reservas, encarece pasar por ciudades salvo por la faja ferroviaria existente y marca áreas indígenas. Tiempo de viaje sin paradas. Capas en el botón de capas del mapa.</p>
 </section>
 <script>
 __MOTOR__
@@ -159,8 +163,28 @@ for (const [k, t] of Object.entries(D.trazados)) {
     onEachFeature: (f, l) => l.bindPopup(`<b>${f.properties.subtramo}</b><br>${NOM[f.properties.clase]}: km ${f.properties.desde_km}–${f.properties.hasta_km}`)
   });
 }
-rios.addTo(mapa); fallas.addTo(mapa);
-const capasCtl = { 'Relieve': relieve, 'Geología': geologia, 'Ríos (HydroRIVERS)': rios, 'Cuencas nivel 6': cuencas, 'Fallas activas (GEM)': fallas };
+const ESTRICTOS = new Set(['PN', 'MN', 'RN', 'SN', 'RAMSAR']);
+const protegidas = L.geoJSON(D.capas.protegidas, {
+  style: f => ESTRICTOS.has(f.properties.TIPO)
+    ? { color: css('--protegida'), weight: 1, fillColor: css('--protegida'), fillOpacity: 0.35 }
+    : { color: css('--protegida'), weight: 1, dashArray: '3 3', fillColor: css('--protegida'), fillOpacity: 0.12 },
+  onEachFeature: (f, l) => l.bindPopup(`<b>${f.properties.NOMBRE}</b><br>${f.properties.tipo_nombre}${ESTRICTOS.has(f.properties.TIPO) ? '<br>Protección estricta: el trazado la evita' : ''}`)
+});
+const indigenas = L.geoJSON(D.capas.indigenas, {
+  style: { color: css('--indigena'), weight: 1.5, dashArray: '6 4', fillColor: css('--indigena'), fillOpacity: 0.12 },
+  onEachFeature: (f, l) => l.bindPopup(`<b>Área de Desarrollo Indígena ${f.properties.NOMBRE}</b><br>Un proyecto aquí requiere consulta indígena (Convenio 169 OIT)`)
+});
+const urbanas = L.geoJSON(D.capas.urbanas, {
+  style: { color: css('--urbano'), weight: 0.8, fillColor: css('--urbano'), fillOpacity: 0.35 },
+  onEachFeature: (f, l) => l.bindPopup(`<b>${f.properties.NOMBRE}</b><br>Área urbana`)
+});
+const ferrocarril = L.geoJSON(D.capas.ferrocarril, {
+  style: f => f.properties.operativa ? { color: css('--ffcc'), weight: 1.6 } : { color: css('--ffcc'), weight: 1.2, dashArray: '4 4', opacity: 0.6 },
+  onEachFeature: (f, l) => l.bindPopup(`<b>Ferrocarril</b><br>${f.properties.tipo_nombre}<br>Fuente: IGM 1:50.000`)
+});
+rios.addTo(mapa); fallas.addTo(mapa); protegidas.addTo(mapa); ferrocarril.addTo(mapa);
+const capasCtl = { 'Relieve': relieve, 'Geología': geologia, 'Ríos (HydroRIVERS)': rios, 'Cuencas nivel 6': cuencas, 'Fallas activas (GEM)': fallas,
+  'Áreas protegidas': protegidas, 'Áreas de Desarrollo Indígena': indigenas, 'Áreas urbanas': urbanas, 'Red ferroviaria (IGM)': ferrocarril };
 for (const k of Object.keys(evaluados)) capasCtl['Evaluado: ' + k] = evaluados[k];
 L.control.layers(null, capasCtl, { collapsed: true }).addTo(mapa);
 L.control.scale({ imperial: false }).addTo(mapa);
@@ -188,8 +212,9 @@ imgDem.onload = () => {
   const cx = c.getContext('2d', { willReadFrequently: true }); cx.drawImage(imgDem, 0, 0);
   const px = cx.getImageData(0, 0, c.width, c.height).data;
   const z = new Float32Array(c.width * c.height);
-  for (let i = 0; i < z.length; i++) { const v = px[4 * i] * 256 + px[4 * i + 1]; z[i] = v === 0 ? NaN : v - 1000; }
-  G = { ...D.dem.meta, w: c.width, h: c.height, z };
+  const b = new Uint8Array(c.width * c.height);
+  for (let i = 0; i < z.length; i++) { const v = px[4 * i] * 256 + px[4 * i + 1]; z[i] = v === 0 ? NaN : v - 1000; b[i] = px[4 * i + 2]; }
+  G = { ...D.dem.meta, w: c.width, h: c.height, z, b };
   if (!puntos.length) $('estado').textContent = 'Listo. Haz click en el origen.';
 };
 imgDem.src = D.dem.src;
@@ -248,7 +273,7 @@ function geojson(r) {
 function calcular() {
   $('estado').textContent = 'Calculando…';
   setTimeout(() => {
-    const r = MotorAV.trazar(G, puntos[0], puntos[1], { velocidad: +$('vel').value, pendiente: +$('pend').value, prioridad: 0.3 }, { rios: D.capas.rios, fallas: D.capas.fallas });
+    const r = MotorAV.trazar(G, puntos[0], puntos[1], { velocidad: +$('vel').value, pendiente: +$('pend').value, prioridad: 0.3 }, D.capas);
     if (r.error) { $('estado').textContent = r.error; return; }
     ultimo = r; dibujar(r); informar(r);
     $('copiar').disabled = false;
@@ -318,8 +343,22 @@ function informar(r) {
   if (!al.length) al.push('Sin obras mayores destacadas a esta escala.');
   al.push('Todo el país es zona sísmica: viaductos y túneles con diseño sísmico (NCh 433 y equivalentes ferroviarios).');
   $('alertas').innerHTML = al.map(t => `<li>${t}</li>`).join('');
+  const T = r.territorio, tk = T.km, ter = [];
+  ter.push(`${fmt(tk.urbano, 1)} km dentro de áreas urbanas${tk.urbano > 0 ? `, de ellos ${fmt(Math.min(tk.ffcc, tk.urbano), 1)} km junto a vías férreas existentes (posible uso de su faja)` : ''}.`);
+  ter.push(`${fmt(tk.ffcc, 1)} km en total sobre o junto a la red ferroviaria actual.`);
+  if (tk.estricta > 0.05) ter.push(`<b>${fmt(tk.estricta, 1)} km dentro de áreas protegidas estrictas</b>: ${T.protegidas.filter(p => /Parque|Reserva|Monumento|Santuario|Ramsar/i.test(p.tipo)).map(p => `${p.tipo} ${p.nombre} (km ${fmt(p.km)})`).join('; ') || 'ver mapa'}. Requiere túnel o un desvío.`);
+  else ter.push('No cruza parques, reservas, monumentos ni santuarios de la naturaleza.');
+  const sens = T.protegidas.filter(p => !/Parque|Reserva|Monumento|Santuario|Ramsar/i.test(p.tipo));
+  if (tk.sensible > 0.05) ter.push(`${fmt(tk.sensible, 1)} km en áreas de conservación o sitios prioritarios${sens.length ? ': ' + sens.slice(0, 4).map(p => p.nombre).join('; ') : ''}.`);
+  if (tk.indigena > 0.05) ter.push(`<b>${fmt(tk.indigena, 1)} km en Áreas de Desarrollo Indígena</b> (${T.indigenas.map(p => p.nombre).join(', ') || 'ver mapa'}): requiere consulta indígena.`);
+  else ter.push('No cruza Áreas de Desarrollo Indígena. Igual puede haber comunidades y tierras indígenas fuera de ellas.');
+  $('territorio').innerHTML = ter.map(t => `<li>${t}</li>`).join('');
+  const est = new Set(r.estaciones.map(e => e.nombre));
+  $('ciudades').innerHTML = r.ciudades.length ? `<table><thead><tr><th>Ciudad</th><th>km</th><th>Distancia</th><th>Habitantes</th></tr></thead><tbody>${r.ciudades.map(ci => `<tr><td>${ci.nombre}${est.has(ci.nombre) ? ' · estación' : ''}</td><td>${fmt(ci.km)}</td><td>${fmt(ci.dist_km, 1)} km</td><td>${fmt(ci.pob)}</td></tr>`).join('')}</tbody></table><p class="nota" style="margin-top:4px">Áreas urbanas a menos de 10 km del eje. Población 2025 estimada por GHSL dentro de cada área urbana. Se sugiere estación en ciudades de más de 100 mil habitantes separadas al menos 40 km.</p>` : '<p class="sub">No hay ciudades de más de 15 mil habitantes a menos de 10 km.</p>';
+  const dm = r.demanda;
+  $('demanda').innerHTML = `Para pagar la obra solo con pasajes harían falta unos <b>${fmt(dm.pasajeros_necesarios / 1e6, 1)} millones de pasajeros al año</b>${dm.poblacion ? `, es decir ${fmt(dm.viajes_por_habitante, 1)} viajes al año por cada habitante de las ciudades del corredor (${fmt(dm.poblacion / 1e6, 1)} millones)` : ''}. Supone tasa de ${dm.supuestos.tasa * 100} % a ${dm.supuestos.anos} años, operación y mantención de ${fmt(dm.supuestos.oym * 100, 1)} % anual de la inversión, tarifa de US$ ${fmt(dm.supuestos.tarifa_km, 2)} por km y viaje medio del ${dm.supuestos.viaje_medio * 100} % del largo. Es un umbral de referencia, no una proyección de demanda.`;
   const c = r.costo, cu = MotorAV.COSTO;
-  $('costo').innerHTML = `Entre <b>US$ ${fmt(c.bajo / 1000, 1)}</b> y <b>${fmt(c.alto / 1000, 1)} mil millones</b> (central ${fmt(c.total / 1000, 1)}), unos US$ ${fmt(c.total / r.largo_km)} millones por km. Supone ${cu.tierra} / ${cu.viaducto} / ${cu.tunel} MUSD por km de superficie / viaducto / túnel, ${cu.puente_rio} MUSD por puente mayor, dos terminales de ${cu.terminal} MUSD y ${cu.contingencia * 100} % de contingencia. Rangos típicos de líneas de alta velocidad en Europa y Asia; no incluye material rodante, expropiaciones ni estaciones intermedias.`;
+  $('costo').innerHTML = `Entre <b>US$ ${fmt(c.bajo / 1000, 1)}</b> y <b>${fmt(c.alto / 1000, 1)} mil millones</b> (central ${fmt(c.total / 1000, 1)}), unos US$ ${fmt(c.total / r.largo_km)} millones por km. Supone ${cu.tierra} / ${cu.viaducto} / ${cu.tunel} MUSD por km de superficie / viaducto / túnel, ${cu.puente_rio} MUSD por puente mayor, dos terminales de ${cu.terminal} MUSD, ${r.estaciones.length} estaciones intermedias de ${cu.estacion} MUSD, expropiación rural de ${cu.expropiacion_rural} MUSD/km, ${cu.urbano_extra} MUSD/km extra en zona urbana y ${cu.contingencia * 100} % de contingencia. Rangos típicos de líneas de alta velocidad en Europa y Asia; no incluye material rodante.`;
 }
 
 function ejeX(r, W, x0) { const L = r.km[r.km.length - 1] || 1; return km => x0 + (km / L) * (W - x0 - 8); }

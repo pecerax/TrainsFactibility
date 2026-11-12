@@ -22,6 +22,18 @@ def a_data_uri(img, calidad=78):
     return "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode()
 
 
+def capa_liviana(ruta: Path, tolerancia: float, filtro, campos):
+    """GeoJSON simplificado para incrustar en el mapa."""
+    import geopandas as gpd
+    g = gpd.read_file(ruta)
+    if filtro:
+        g = filtro(g)
+    g = g[campos + ["geometry"]].copy()
+    g["geometry"] = g.geometry.simplify(tolerancia, preserve_topology=True).set_precision(1e-4)
+    g = g[~g.geometry.is_empty & g.geometry.notna()]
+    return json.loads(g.to_json(drop_id=True))
+
+
 def cargar(ruta: Path):
     return json.loads(ruta.read_text(encoding="utf-8"))
 
@@ -31,6 +43,12 @@ def main():
         "rios": cargar(PROCESADO / "rios_mapa.geojson"),
         "cuencas": cargar(PROCESADO / "cuencas_chile.geojson"),
         "fallas": cargar(PROCESADO / "fallas_chile.geojson"),
+        "protegidas": capa_liviana(PROCESADO / "areas_protegidas.geojson", 0.004,
+                                   lambda g: g[g.TIPO.isin(grilla.TIPOS_ESTRICTOS | grilla.TIPOS_SENSIBLES)],
+                                   ["TIPO", "tipo_nombre", "NOMBRE"]),
+        "indigenas": capa_liviana(PROCESADO / "areas_desarrollo_indigena.geojson", 0.003, None, ["NOMBRE"]),
+        "urbanas": capa_liviana(PROCESADO / "areas_urbanas.geojson", 0.001, None, ["NOMBRE"]),
+        "ferrocarril": capa_liviana(PROCESADO / "red_ferroviaria.geojson", 0.001, None, ["tipo_nombre", "operativa"]),
     }
     trazados = {}
     for carpeta in sorted(REPORTES.iterdir()):
@@ -58,8 +76,10 @@ def main():
     print("Generando grilla de elevación para el trazado interactivo ...", flush=True)
     bbox_dem = (-75.8, -56.0, -66.4, -17.4)
     g, (lon0, lat0, paso) = grilla.grilla(bbox_dem)
-    dem_uri, _ = grilla.a_png_uri(g)
-    dem = {"src": dem_uri, "meta": {"lon0": lon0, "lat0": lat0, "paso": paso}}
+    b = grilla.banderas(bbox_dem, paso, g.shape)
+    dem_uri, _ = grilla.a_png_uri_con_banderas(g, b)
+    dem = {"src": dem_uri, "meta": {"lon0": lon0, "lat0": lat0, "paso": paso}, "banderas": grilla.BANDERAS}
+    capas["ciudades"] = grilla.ciudades()
 
     datos = json.dumps({"dem": dem, "rasters": rasters, "capas": capas, "trazados": trazados, "paradas": paradas}, ensure_ascii=False,
                        separators=(",", ":"))
